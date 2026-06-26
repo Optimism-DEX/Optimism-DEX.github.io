@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://optimism-dex.github.io/sitemap.xml
