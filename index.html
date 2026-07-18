@@ -3,318 +3,309 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Optimism DEX - Fast L2 Swaps</title>
-  <meta name="description" content="Optimism DEX puts OP Mainnet swaps in a self-custody flow: compare the route, review live costs, and trade from your wallet.">
-  <meta name="theme-color" content="#FBFAF7">
+  <title>Optimism DEX — Swap tokens on Optimism</title>
+  <meta name="description" content="Optimism DEX is a descriptive term for decentralized exchanges deployed on OP Mainnet that let users swap tokens through smart contracts.">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <meta name="theme-color" content="#eef0f3">
   <link rel="canonical" href="https://optimism-dex.github.io/">
-  <meta name="robots" content="index,follow">
   <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="prefetch" href="dashboard/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Optimism DEX - Fast L2 Swaps">
-  <meta property="og:description" content="Swap on Optimism from a non-custodial app with live routing, wallet confirmation, and clear transaction review.">
-  <meta property="og:image" content="og-cover.png">
-  <meta property="og:url" content="https://optimism-dex.github.io/">
+  <link rel="prefetch" href="dashboard/index.html">
+  <link rel="preconnect" href="https://defillama.com/" crossorigin>
+  <link rel="preconnect" href="https://coins.llama.fi" crossorigin>
+  <meta property="og:type" content="website"><meta property="og:url" content="https://optimism-dex.github.io/">
+  <meta property="og:title" content="Optimism DEX — Swap tokens on Optimism">
+  <meta property="og:description" content="Optimism DEX is a descriptive term for decentralized exchanges deployed on OP Mainnet that let users swap tokens through smart contracts.">
+  <meta property="og:site_name" content="Optimism DEX dashboard"><meta property="og:image" content="https://optimism-dex.github.io/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Optimism DEX — Swap tokens on Optimism"><meta name="twitter:description" content="Optimism DEX is a descriptive term for decentralized exchanges deployed on OP Mainnet that let users swap tokens through smart contracts."><meta name="twitter:image" content="https://optimism-dex.github.io/og-cover.png">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {"@type":"WebSite","@id":"https://optimism-dex.github.io/#website","url":"https://optimism-dex.github.io/","name":"Optimism DEX dashboard","inLanguage":"en-US"},
+      {"@type":"Thing","@id":"https://optimism-dex.github.io/#brand","name":"Optimism DEX",
+       "description":"Optimism DEX is a descriptive term for decentralized exchanges deployed on OP Mainnet that let users swap tokens through smart contracts.",
+       "sameAs":["https://optimism.io/", "https://docs.optimism.io/", "https://github.com/ethereum-optimism", "https://x.com/Optimism"]},
+      {"@type":"WebApplication","@id":"https://optimism-dex.github.io/#widget","name":"Optimism DEX preview","applicationCategory":"FinanceApplication","operatingSystem":"Any","url":"https://optimism-dex.github.io/#route-preview","isPartOf":{"@id":"https://optimism-dex.github.io/#webpage"},"featureList":["Preview the route","Reverse the direction","Open the app"]},
+      {"@type":"WebPage","@id":"https://optimism-dex.github.io/#webpage","url":"https://optimism-dex.github.io/","name":"Optimism DEX \u2014 Swap tokens on Optimism","description":"Optimism DEX is a descriptive term for decentralized exchanges deployed on OP Mainnet that let users swap tokens through smart contracts.","isPartOf":{"@id":"https://optimism-dex.github.io/#website"},"about":{"@id":"https://optimism-dex.github.io/#brand"},"mainEntity":{"@id":"https://optimism-dex.github.io/#brand"},"inLanguage":"en-US","mentions":[{"@type":"Thing","name":"Decentralized exchange","sameAs":"https://en.wikipedia.org/wiki/Decentralized_finance#Decentralized_exchanges"},{"@type":"Thing","name":"Optimistic rollup","sameAs":"https://docs.optimism.io/op-stack/protocol/overview"}]},
+      {"@type":"ItemList","@id":"https://optimism-dex.github.io/#resources","name":"Optimism DEX \u2014 resources & references","itemListElement":[{"@type":"ListItem","position":1,"name":"OP Mainnet overview","url":"https://optimism.io/blog/what-is-op-mainnet"},{"@type":"ListItem","position":2,"name":"Rollup protocol overview","url":"https://docs.optimism.io/op-stack/protocol/overview"},{"@type":"ListItem","position":3,"name":"Ethereum DeFi guide","url":"https://ethereum.org/defi/"},{"@type":"ListItem","position":4,"name":"Decentralized exchanges","url":"https://en.wikipedia.org/wiki/Decentralized_finance#Decentralized_exchanges"},{"@type":"ListItem","position":5,"name":"OP Mainnet on L2BEAT","url":"https://l2beat.com/scaling/projects/op-mainnet"},{"@type":"ListItem","position":6,"name":"OP Mainnet TVL","url":"https://defillama.com/chain/op-mainnet"},{"@type":"ListItem","position":7,"name":"Optimism DEX volume","url":"https://defillama.com/dexs?category=Dexes&chain=optimism"},{"@type":"ListItem","position":8,"name":"Optimism blockchain data","url":"https://www.coingecko.com/en/chains/optimistic-ethereum"},{"@type":"ListItem","position":9,"name":"Optimism analytics","url":"https://www.growthepie.com/chains/optimism"},{"@type":"ListItem","position":10,"name":"OP Mainnet explorer stats","url":"https://explorer.optimism.io/stats"},{"@type":"ListItem","position":11,"name":"Connect to OP Mainnet","url":"https://docs.optimism.io/op-mainnet/network-information/connecting-to-op"},{"@type":"ListItem","position":12,"name":"OP Mainnet Gateway","url":"https://app.optimism.io/"},{"@type":"ListItem","position":13,"name":"How to swap tokens","url":"https://ethereum.org/guides/how-to-swap-tokens/"},{"@type":"ListItem","position":14,"name":"Swap with Uniswap","url":"https://support.uniswap.org/hc/en-us/articles/8370549680909-How-to-swap-tokens-with-the-Uniswap-web-app"},{"@type":"ListItem","position":15,"name":"Use the Standard Bridge","url":"https://docs.optimism.io/app-developers/guides/bridging/standard-bridge"},{"@type":"ListItem","position":16,"name":"OP Stack security model","url":"https://docs.optimism.io/op-stack/security/faq-sec-model"},{"@type":"ListItem","position":17,"name":"OP Stack audit reports","url":"https://docs.optimism.io/op-stack/security/audit-reports"},{"@type":"ListItem","position":18,"name":"Review token approvals","url":"https://explorer.optimism.io/essential-dapps/revoke"},{"@type":"ListItem","position":19,"name":"Optimism network status","url":"https://status.optimism.io/"},{"@type":"ListItem","position":20,"name":"Optimism source code","url":"https://github.com/ethereum-optimism/optimism"},{"@type":"ListItem","position":21,"name":"Scam help and reporting","url":"https://ethereum.org/community/support/scams/"}]}
+    ]
+  }
+  </script>
   <style>
-  :root{
-    --bg:#FBFAF7; --panel:#FFFFFF; --field:#F2F6F4;
-    --ink:#0F1A18; --muted:#5C6A66; --faint:#93A09B;
-    --line:rgba(15,26,24,.09); --line-2:rgba(15,26,24,.05);
-    --accent:#FF0420; --accent-ink:#BC0217; --accent-soft:rgba(255,4,32,.1);
-    --pos:#15A34A;
-    --radius:22px; --radius-sm:14px;
-    --shadow-card:0 1px 0 rgba(15,26,24,.03), 0 34px 64px -30px rgba(10,50,44,.28), 0 10px 24px -18px rgba(10,50,44,.16);
-    --shadow-soft:0 1px 0 rgba(15,26,24,.02), 0 20px 44px -32px rgba(10,50,44,.22);
-    --ui:"Space Grotesk",-apple-system,system-ui,sans-serif;
-    --body:"Inter",-apple-system,system-ui,sans-serif;
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0; overflow-x:hidden}
-  body{background:var(--bg); color:var(--ink); font-family:var(--body); line-height:1.55; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; position:relative}
-  a{color:inherit; text-decoration:none}
-  a.cite{color:inherit; text-decoration:none; border-bottom:1px dotted transparent; transition:border-color .15s ease}
-  a.cite:hover{border-bottom-color:var(--faint)}
-  img{display:block; max-width:100%}
-  button{font:inherit; cursor:pointer; border:none; background:none; color:inherit}
-  h1,h2,h3,p{margin:0}
-
-  /* texture: diagonal hatch + soft glow */
-  .bg{position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden}
-  .bg .glow{position:absolute; inset:0; background:
-      radial-gradient(760px 480px at 50% -6%, rgba(255,4,32,.1), transparent 62%),
-      radial-gradient(620px 520px at 90% 16%, rgba(255,4,32,.06), transparent 60%);}
-  .bg .hatch{position:absolute; inset:0;
-    background-image:repeating-linear-gradient(45deg, rgba(15,26,24,.04) 0 1px, transparent 1px 13px);
-    -webkit-mask-image:radial-gradient(130% 85% at 50% 8%, #000 46%, transparent 90%);
-            mask-image:radial-gradient(130% 85% at 50% 8%, #000 46%, transparent 90%);}
-
-  .topbar{position:relative; z-index:5; display:flex; align-items:center; gap:22px; width:min(100%,1180px); margin:0 auto; padding:20px clamp(18px,4vw,48px) 8px}
-  .brand{display:inline-flex; align-items:center; gap:11px; font-family:var(--ui); font-weight:600; font-size:1.05rem; letter-spacing:-.01em}
-  .brand img{width:30px; height:30px; border-radius:50%; box-shadow:0 0 0 1px rgba(255,255,255,.8), 0 8px 18px -12px rgba(255,4,32,.5)}
-  .spacer{flex:1}
-  .nav{display:flex; align-items:center; gap:clamp(16px,2.6vw,30px)}
-  .nav a{font-family:var(--ui); font-weight:500; font-size:.92rem; color:var(--muted); transition:color .16s ease}
-  .nav a:hover{color:var(--accent-ink)}
-
-  .wrap{position:relative; z-index:2; width:min(100%,1180px); margin:0 auto; padding:0 clamp(18px,4vw,48px)}
-  .sec{padding-top:clamp(50px,7vh,90px); padding-bottom:clamp(50px,7vh,90px)}
-  .sec-head{max-width:60ch; margin:0 0 clamp(26px,4vh,40px)}
-  .eyebrow{display:inline-flex; align-items:center; gap:9px; font-family:var(--ui); font-weight:600; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--accent-ink)}
-  .eyebrow .dot{width:7px; height:7px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px var(--accent-soft)}
-  .eyebrow svg{width:15px; height:15px}
-  .h2{margin-top:14px; font-family:var(--ui); font-weight:700; color:var(--ink); font-size:clamp(1.9rem,3.4vw,2.7rem); line-height:1.04; letter-spacing:-.02em}
-  .sec-head p{margin-top:14px; color:var(--muted); font-size:clamp(1rem,1.3vw,1.12rem); line-height:1.6}
-
-  /* hero - centered headline + WIDE route band */
-  .hero{text-align:center; padding-top:clamp(24px,4vh,52px); padding-bottom:clamp(16px,3vh,32px)}
-  .hero .eyebrow{margin:0 auto}
-  .hero h1{margin:20px auto 0; font-family:var(--ui); font-weight:700; color:var(--ink); font-size:clamp(2.9rem,6.6vw,5rem); line-height:.98; letter-spacing:-.035em; max-width:16ch}
-  .deck{max-width:52ch; margin:18px auto 0; color:var(--muted); font-size:clamp(1.04rem,1.5vw,1.2rem); line-height:1.58}
-  .deck strong{color:var(--ink); font-weight:600; box-shadow:inset 0 -.36em 0 var(--accent-soft)}
-  .cta-row{display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:14px; margin:26px 0 0}
-  .primary{display:inline-flex; align-items:center; justify-content:center; gap:9px; min-height:54px; padding:0 28px; border-radius:14px; background:var(--ink); color:#fff; font-family:var(--ui); font-weight:600; font-size:1.02rem; letter-spacing:-.01em; box-shadow:0 16px 30px -16px rgba(15,26,24,.7); transition:transform .18s ease, filter .18s ease}
-  .primary:hover{transform:translateY(-1px); filter:brightness(1.08)}
-  .primary svg{width:17px; height:17px}
-  .ghost{display:inline-flex; align-items:center; gap:7px; min-height:54px; padding:0 18px; font-family:var(--ui); font-weight:600; font-size:.98rem; color:var(--muted); transition:color .16s ease}
-  .ghost:hover{color:var(--accent-ink)}
-  .ghost svg{width:15px; height:15px}
-
-  /* WIDE route band */
-  .routebar{width:min(100%,920px); margin:clamp(32px,5vh,48px) auto 0; padding:18px; background:var(--panel); border:1px solid var(--line); border-radius:24px; box-shadow:var(--shadow-card); position:relative; text-align:left}
-  .routebar::before{content:""; position:absolute; inset:0 0 auto; height:1px; border-radius:24px 24px 0 0; background:linear-gradient(90deg, transparent, rgba(255,4,32,.4), transparent)}
-  .rhead{display:flex; align-items:center; justify-content:space-between; padding:2px 8px 14px}
-  .rhead .ct{font-family:var(--ui); font-weight:600; font-size:1.04rem}
-  .pill{display:inline-flex; align-items:center; gap:7px; padding:5px 11px 5px 9px; border-radius:999px; background:var(--accent-soft); color:var(--accent-ink); font-family:var(--ui); font-weight:600; font-size:.76rem}
-  .pill .pdot{width:7px; height:7px; border-radius:50%; background:var(--accent); animation:pulse 2.4s ease-out infinite}
-  .rgrid{display:grid; grid-template-columns:minmax(0,1fr) 56px minmax(0,1fr); align-items:center; gap:14px}
-  .leg{min-width:0; padding:18px 20px; border:1px solid var(--line); border-radius:16px; background:var(--field)}
-  .leg .lab{display:block; color:var(--muted); font-size:.78rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase}
-  .leg .legrow{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:12px}
-  .leg .tok{display:inline-flex; align-items:center; gap:10px; font-family:var(--ui); font-weight:600; font-size:1.16rem}
-  .leg .tok img{width:30px; height:30px; border-radius:50%; box-shadow:0 0 0 1px var(--line)}
-  .leg .tok .cv{color:var(--faint); font-size:.78em}
-  .leg .gv{color:var(--faint); font-size:.86rem; white-space:nowrap}
-  .rswitch{width:48px; height:48px; justify-self:center; border-radius:50%; border:1px solid var(--line); background:var(--panel); color:var(--accent-ink); display:grid; place-items:center; box-shadow:0 8px 18px -10px rgba(10,50,44,.4); transition:transform .25s ease}
-  .rswitch svg{width:18px; height:18px}
-  .rswitch:hover{transform:rotate(180deg)}
-  .rbar-foot{display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-top:12px}
-  .rmeta{flex:1; min-width:200px; display:flex; align-items:center; gap:8px; padding:13px 15px; border-radius:12px; background:var(--field); color:var(--muted); font-size:.84rem}
-  .rmeta svg{width:15px; height:15px; color:var(--accent-ink); flex:none}
-  .rcta{display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:52px; padding:0 30px; border-radius:14px; background:var(--ink); color:#fff; font-family:var(--ui); font-weight:600; font-size:1rem; box-shadow:0 14px 28px -16px rgba(15,26,24,.65); transition:transform .18s ease, filter .18s ease}
-  .rcta:hover{transform:translateY(-1px); filter:brightness(1.08)}
-  .rnote{margin:11px 4px 0; color:var(--faint); font-size:.78rem}
-
-  /* why - icon-left rows */
-  .rows{display:grid; gap:12px}
-  .frow2{display:flex; align-items:flex-start; gap:18px; padding:22px 24px; background:var(--panel); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow-soft)}
-  .frow2 .ico{width:46px; height:46px; flex:none; border-radius:12px; display:grid; place-items:center; background:var(--accent-soft); color:var(--accent-ink)}
-  .frow2 .ico svg{width:22px; height:22px}
-  .frow2 h3{font-family:var(--ui); font-weight:600; font-size:1.12rem; color:var(--ink); letter-spacing:-.01em}
-  .frow2 p{margin-top:6px; color:var(--muted); font-size:.95rem; line-height:1.55; max-width:70ch}
-
-  /* how it works */
-  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
-  .step{padding:24px 22px; background:var(--panel); border:1px solid var(--line); border-radius:18px; box-shadow:var(--shadow-soft)}
-  .step .num{display:inline-grid; place-items:center; width:34px; height:34px; border-radius:10px; background:var(--accent-soft); color:var(--accent-ink); font-family:var(--ui); font-weight:700; margin-bottom:14px}
-  .step h3{margin:0 0 8px; font-family:var(--ui); font-weight:600; font-size:1.12rem; color:var(--ink); letter-spacing:-.01em}
-  .step p{color:var(--muted); font-size:.94rem; line-height:1.55}
-
-  /* FAQ - 2-col cards */
-  .faq{display:grid; grid-template-columns:repeat(2,1fr); gap:14px}
-  .qa{padding:22px; background:var(--panel); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow-soft)}
-  .qa .qn{font-family:var(--ui); font-weight:700; font-size:.8rem; color:var(--accent-ink); letter-spacing:.04em}
-  .qa h3{margin:8px 0 8px; font-family:var(--ui); font-weight:600; font-size:1.08rem; color:var(--ink); letter-spacing:-.01em}
-  .qa p{color:var(--muted); font-size:.95rem; line-height:1.6}
-  .qa a:not(.cite){color:var(--accent-ink); font-weight:600; box-shadow:inset 0 -.34em 0 var(--accent-soft)}
-
-  /* related */
-  .related{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
-  .rel{display:flex; flex-direction:column; gap:7px; padding:22px; background:var(--panel); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow-soft); transition:transform .16s ease, border-color .16s ease}
-  .rel:hover{transform:translateY(-2px); border-color:rgba(255,4,32,.35)}
-  .rel .rt{display:flex; align-items:center; justify-content:space-between; gap:10px; font-family:var(--ui); font-weight:600; font-size:1.05rem; color:var(--ink); letter-spacing:-.01em}
-  .rel .rt svg{width:16px; height:16px; color:var(--accent-ink); flex:none}
-  .rel p{color:var(--muted); font-size:.9rem; line-height:1.5}
-
-  .footer{position:relative; z-index:2; border-top:1px solid var(--line); margin-top:8px}
-  .footer .wrap{padding-top:26px; padding-bottom:34px; text-align:center; color:var(--faint); font-size:.84rem}
-  .footer b{color:var(--muted); font-weight:600}
-
-  @keyframes pulse{0%{box-shadow:0 0 0 0 var(--accent-soft)} 70%{box-shadow:0 0 0 8px rgba(255,4,32,0)} 100%{box-shadow:0 0 0 0 rgba(255,4,32,0)}}
-
-  @media (max-width:920px){
-    .nav{display:none}
-    .rgrid{grid-template-columns:1fr; gap:9px}
-    .rswitch{transform:rotate(90deg)}
-    .rswitch:hover{transform:rotate(270deg)}
-    .steps,.faq,.related{grid-template-columns:1fr}
-  }
-  @media (max-width:430px){
-    .hero h1{font-size:clamp(2.5rem,12vw,3.5rem)}
-    .cta-row .primary,.cta-row .ghost{width:100%}
-    .rbar-foot{flex-direction:column; align-items:stretch}
-    .rcta{width:100%}
-  }
-  @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important; transition-duration:.01ms!important}}
+:root{
+  --bg:#eef0f3; --bg-2:#e7eaef; --panel:#ffffff; --field:#f1f3f7; --field-2:#e9edf2;
+  --ink:#151a21; --text:#414954; --muted:#6a727d; --faint:#9aa2ad;
+  --line:rgba(20,26,33,.09); --line-2:rgba(20,26,33,.14);
+  --accent:#ff0420; --accent-ink:#b90116; --accent-soft:rgba(255,4,32,0.13); --accent-glow:rgba(255,4,32,0.3);
+  --cta:#171a20; --cta-hover:#0a0c10; --cta-ink:#ffffff;
+  --shadow-card:0 1px 0 rgba(20,26,33,.02), 0 40px 80px -42px rgba(24,32,48,.40), 0 14px 30px -22px rgba(24,32,48,.24);
+  --shadow-pop:0 24px 60px -26px rgba(24,32,48,.38), 0 8px 20px -12px rgba(24,32,48,.22);
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+  --font: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --ease: cubic-bezier(0.22, 0.7, 0.24, 1);
+  color-scheme: light;
+}
+html[data-theme="dark"]{
+  --bg:#0b0e13; --bg-2:#0e131b; --panel:#141a24; --field:#1b2230; --field-2:#232c3d;
+  --ink:#e9eef7; --text:#bcc5d6; --muted:#8b95a8; --faint:#606a7e;
+  --line:rgba(226,234,250,.10); --line-2:rgba(226,234,250,.18);
+  --accent:#ff4a5e; --accent-ink:#ff818f; --accent-soft:rgba(255,74,94,0.16); --accent-glow:rgba(255,74,94,0.34);
+  --cta:#ff4a5e; --cta-hover:#db3f50; --cta-ink:#ffffff;
+  --shadow-card:0 30px 70px -34px rgba(0,0,0,.66), 0 6px 18px -10px rgba(0,0,0,.5);
+  --shadow-pop:0 24px 60px -26px rgba(0,0,0,.7);
+  color-scheme: dark;
+}
+*{ box-sizing:border-box; }
+html{ height:100%; scroll-behavior:smooth; }
+@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+body{ margin:0; min-width:320px; height:100%; overflow:hidden; color:var(--text); background:var(--bg); font-family:var(--font); font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+a{ color:inherit; text-decoration:none; }
+button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+img{ display:block; max-width:100%; }
+h1,h2,h3,p{ margin:0; }
+a:focus-visible, button:focus-visible, summary:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:10px; }
+.skip{ position:absolute; left:-999px; }
+.skip:focus{ left:12px; top:12px; z-index:120; padding:9px 15px; border-radius:10px; background:var(--cta); color:var(--cta-ink); font-weight:750; }
+.bg{ position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; background:
+  radial-gradient(1100px 700px at 82% 116%, var(--bg-2), transparent 60%),
+  radial-gradient(900px 620px at -6% -8%, var(--bg-2), transparent 58%); }
+.bg::before{ content:""; position:absolute; right:-14%; bottom:-30%; width:min(92vw,940px); aspect-ratio:1; border-radius:50%;
+  background:repeating-radial-gradient(circle at center, transparent 0 86px, var(--line) 86px 87px); opacity:.5; mask:radial-gradient(circle at center, #000 62%, transparent 72%); }
+.bg::after{ content:""; position:absolute; left:-10%; top:-16%; width:min(70vw,560px); aspect-ratio:1; border-radius:50%;
+  background:repeating-radial-gradient(circle at center, transparent 0 64px, var(--line) 64px 65px); opacity:.4; mask:radial-gradient(circle at center, #000 60%, transparent 72%); }
+.topbar{ position:relative; z-index:70; flex:0 0 auto; display:flex; align-items:center; justify-content:space-between; gap:14px; padding:13px clamp(16px,3.4vw,34px);
+  background:color-mix(in srgb, var(--bg) 78%, transparent); backdrop-filter:saturate(140%) blur(12px); -webkit-backdrop-filter:saturate(140%) blur(12px); border-bottom:1px solid var(--line); }
+.tb-left{ display:flex; align-items:center; gap:12px; min-width:0; }
+.hamb{ display:grid; place-items:center; width:40px; height:40px; flex:0 0 auto; position:relative; border:1px solid var(--line-2); border-radius:12px; background:var(--panel); color:var(--ink); transition:border-color .15s var(--ease); }
+.hamb:hover{ border-color:var(--accent); }
+.hamb .bar{ position:absolute; left:11px; right:11px; height:2px; border-radius:2px; background:currentColor; transition:transform .24s var(--ease), opacity .18s var(--ease); }
+.hamb .bar:nth-child(1){ top:14px; } .hamb .bar:nth-child(2){ top:19px; } .hamb .bar:nth-child(3){ top:24px; }
+body.drawer-open .hamb .bar:nth-child(1){ transform:translateY(5px) rotate(45deg); }
+body.drawer-open .hamb .bar:nth-child(2){ opacity:0; }
+body.drawer-open .hamb .bar:nth-child(3){ transform:translateY(-5px) rotate(-45deg); }
+.brand{ display:flex; align-items:center; gap:11px; min-width:0; }
+.brand-logo{ width:34px; height:34px; flex:0 0 auto; display:grid; place-items:center; border-radius:10px; background:var(--panel); box-shadow:inset 0 0 0 1px var(--line-2); }
+.brand-logo img{ width:22px; height:22px; border-radius:50%; }
+.brand-name{ font-size:19px; font-weight:820; letter-spacing:-0.03em; color:var(--ink); line-height:1.1; white-space:nowrap; }
+.tb-right{ display:flex; align-items:center; gap:9px; }
+.theme-toggle{ display:inline-flex; align-items:center; gap:2px; padding:3px; border-radius:999px; background:var(--field); box-shadow:inset 0 0 0 1px var(--line); }
+.theme-toggle button{ display:grid; place-items:center; width:30px; height:30px; border-radius:999px; color:var(--muted); transition:color .15s var(--ease), background-color .15s var(--ease); }
+.theme-toggle button svg{ width:15px; height:15px; }
+.theme-toggle button[aria-pressed="true"]{ color:var(--ink); background:var(--panel); box-shadow:0 2px 8px -3px rgba(0,0,0,.28); }
+.btn-app{ display:inline-flex; align-items:center; gap:8px; padding:9px 15px; border-radius:11px; background:var(--panel); color:var(--ink); font-size:13.5px; font-weight:700; letter-spacing:-0.01em; box-shadow:inset 0 0 0 1px var(--line-2); transition:box-shadow .15s var(--ease), transform .15s var(--ease); white-space:nowrap; }
+.btn-app svg{ width:16px; height:16px; color:var(--muted); }
+.btn-app:hover{ box-shadow:inset 0 0 0 1px var(--accent); transform:translateY(-1px); }
+.btn-app:hover svg{ color:var(--accent-ink); }
+.scrim{ position:fixed; inset:0; z-index:80; background:rgba(10,14,17,.42); opacity:0; visibility:hidden; transition:opacity .28s var(--ease), visibility .28s var(--ease); }
+body.drawer-open .scrim{ opacity:1; visibility:visible; }
+.drawer{ position:fixed; z-index:90; top:0; left:0; height:100dvh; width:300px; max-width:86vw; display:flex; flex-direction:column; padding:16px 14px 16px; background:var(--panel); border-right:1px solid var(--line); box-shadow:var(--shadow-pop);
+  transform:translateX(-104%); transition:transform .3s var(--ease); overflow-y:auto; }
+body.drawer-open .drawer{ transform:translateX(0); }
+.drawer-head{ display:flex; align-items:center; justify-content:space-between; gap:10px; padding:2px 6px 8px; }
+.drawer-head .brand-name{ font-size:15px; }
+.drawer-close{ display:grid; place-items:center; width:34px; height:34px; border-radius:10px; color:var(--muted); }
+.drawer-close:hover{ color:var(--ink); background:var(--field); }
+.drawer-close svg{ width:17px; height:17px; }
+.nav-label{ margin:15px 12px 6px; font-size:10px; font-weight:750; letter-spacing:0.15em; text-transform:uppercase; color:var(--faint); }
+.nav-item{ display:flex; align-items:center; gap:12px; padding:9px 12px; border-radius:10px; color:var(--text); font-size:14px; font-weight:650; transition:color .15s var(--ease), background-color .15s var(--ease); }
+.nav-item .ni-ico{ width:18px; height:18px; flex:0 0 auto; color:var(--muted); }
+.nav-item.is-active{ color:var(--accent-ink); background:var(--accent-soft); }
+.nav-item.is-active .ni-ico{ color:var(--accent-ink); }
+.nav-item:hover{ color:var(--ink); background:var(--field); }
+.nav-group{ border-radius:10px; }
+.nav-group summary{ display:flex; align-items:center; gap:12px; padding:9px 12px; border-radius:10px; color:var(--text); font-size:14px; font-weight:650; cursor:pointer; list-style:none; transition:color .15s var(--ease), background-color .15s var(--ease); }
+.nav-group summary::-webkit-details-marker{ display:none; }
+.nav-group summary .ni-ico{ width:18px; height:18px; flex:0 0 auto; color:var(--muted); }
+.nav-group summary .chev{ width:15px; height:15px; margin-left:auto; color:var(--faint); transition:transform .2s var(--ease); }
+.nav-group summary:hover{ color:var(--ink); background:var(--field); }
+.nav-group[open] summary{ color:var(--ink); }
+.nav-group[open] summary .chev{ transform:rotate(180deg); }
+.nav-sub{ display:flex; flex-direction:column; gap:1px; padding:2px 0 8px 42px; }
+.nav-sub a{ display:flex; align-items:baseline; gap:7px; padding:6px 10px; border-radius:8px; color:var(--muted); font-size:12.5px; font-weight:550; transition:color .15s var(--ease), background-color .15s var(--ease); }
+.nav-sub a small{ color:var(--faint); font-size:10.5px; font-weight:500; }
+.nav-sub a:hover{ color:var(--accent-ink); background:var(--field); }
+.drawer-foot{ margin-top:auto; padding-top:13px; border-top:1px solid var(--line); }
+.disclose{ margin:8px 8px 0; font-size:11px; line-height:1.5; color:var(--muted); }
+.disclose strong{ color:var(--text); font-weight:750; }
+.fine{ margin:6px 8px 0; font-size:10.5px; line-height:1.45; color:var(--faint); }
+.app{ height:100dvh; display:flex; flex-direction:column; overflow:hidden; position:relative; z-index:1; }
+.wrap{ flex:1 1 auto; min-height:0; display:grid; place-items:center; overflow:hidden; }
+.stage{ width:100%; max-width:560px; max-height:100%; margin-inline:auto; padding:clamp(14px,3vh,36px) clamp(16px,3.4vw,26px); display:flex; flex-direction:column; align-items:center; text-align:center; }
+.lead{ margin:0 0 clamp(13px,2.2vh,20px); max-width:24ch; font-size:clamp(19px,2.5vw,27px); line-height:1.16; letter-spacing:-0.025em; font-weight:750; color:var(--ink); }
+.lead .hl{ color:var(--accent-ink); }
+.hero-chips{ display:flex; flex-wrap:wrap; justify-content:center; gap:9px; margin-top:clamp(13px,2.2vh,18px); }
+.hchip{ display:inline-flex; align-items:baseline; gap:7px; padding:8px 13px; border-radius:12px; background:var(--panel); box-shadow:inset 0 0 0 1px var(--line); font-size:12px; font-weight:600; color:var(--muted); transition:box-shadow .15s var(--ease), color .15s var(--ease); }
+.hchip b{ color:var(--ink); font-family:var(--mono); font-size:12.5px; font-weight:650; font-variant-numeric:tabular-nums; }
+.hchip .ext{ color:var(--faint); font-size:10px; }
+a.hchip:hover{ box-shadow:inset 0 0 0 1px var(--accent); color:var(--text); }
+a.hchip:hover .ext{ color:var(--accent-ink); }
+.swap-card{ position:relative; width:min(480px,100%); border-radius:28px; background:var(--panel); padding:clamp(20px,4vw,30px); text-align:left; box-shadow:var(--shadow-card); }
+.card-head{ display:flex; align-items:center; justify-content:space-between; margin:2px 4px 17px; }
+.card-title{ font-size:15px; font-weight:800; letter-spacing:-0.02em; color:var(--ink); }
+.badge{ display:inline-flex; align-items:center; gap:6px; padding:5px 11px; border-radius:999px; color:var(--accent-ink); background:var(--accent-soft); font-size:10px; font-weight:750; letter-spacing:0.07em; text-transform:uppercase; }
+.badge i{ width:6px; height:6px; border-radius:50%; background:var(--accent); }
+.field{ position:relative; padding:17px 18px 18px; border-radius:19px; background:var(--field); }
+.field + .field{ margin-top:6px; }
+.field-top{ display:flex; align-items:center; justify-content:space-between; }
+.field-label{ font-size:12px; font-weight:600; color:var(--muted); }
+.field-bal{ font-size:11px; font-weight:600; color:var(--faint); }
+.field-row{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:11px; min-width:0; }
+.amount{ min-width:0; }
+.amount b{ display:block; font-size:clamp(29px,5vw,38px); font-weight:750; line-height:1; letter-spacing:-0.02em; color:var(--ink); font-variant-numeric:tabular-nums; }
+.amount span{ display:block; margin-top:6px; font-size:11px; font-weight:600; color:var(--faint); }
+.token-pill{ display:inline-flex; align-items:center; gap:10px; flex:0 0 auto; padding:7px 12px 7px 8px; border-radius:999px; background:var(--panel); box-shadow:0 4px 14px -8px rgba(0,0,0,.4), inset 0 0 0 1px var(--line); transition:box-shadow .15s var(--ease); }
+.token-pill:hover{ box-shadow:0 6px 18px -8px rgba(0,0,0,.42), inset 0 0 0 1px var(--line-2); }
+.token-pill img{ width:26px; height:26px; flex:0 0 auto; border-radius:50%; }
+.token-meta{ display:flex; flex-direction:column; line-height:1.05; min-width:0; }
+.token-meta small{ font-size:9.5px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--faint); }
+.token-meta b{ font-size:15px; font-weight:800; letter-spacing:-0.01em; color:var(--ink); white-space:nowrap; }
+.token-pill .chev{ width:14px; height:14px; flex:0 0 auto; color:var(--faint); }
+.reverse{ position:relative; z-index:2; display:grid; place-items:center; width:40px; height:40px; margin:-14px auto; border:4px solid var(--panel); border-radius:13px; background:var(--field-2); color:var(--muted); box-shadow:0 6px 16px -8px rgba(0,0,0,.4); transition:transform .28s var(--ease), color .15s var(--ease), background-color .15s var(--ease); }
+.reverse svg{ width:16px; height:16px; }
+.reverse:hover{ color:var(--cta-ink); background:var(--accent); transform:rotate(180deg); }
+.details-btn{ display:flex; align-items:center; justify-content:center; gap:8px; width:100%; margin-top:12px; padding:12px; border-radius:14px; background:var(--field); color:var(--muted); font-size:12px; font-weight:750; letter-spacing:0.06em; text-transform:uppercase; transition:color .15s var(--ease), background-color .15s var(--ease); }
+.details-btn svg{ width:14px; height:14px; transition:transform .2s var(--ease); }
+.details-btn:hover{ color:var(--ink); }
+.details-btn[aria-expanded="true"] svg{ transform:rotate(180deg); }
+.details{ overflow:hidden; max-height:0; opacity:0; transition:max-height .3s var(--ease), opacity .22s var(--ease), margin .3s var(--ease); }
+.details.open{ max-height:280px; opacity:1; margin-top:6px; }
+.d-row{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:11px 8px; border-bottom:1px solid var(--line); }
+.d-row:last-child{ border-bottom:0; }
+.d-row span{ font-size:12.5px; font-weight:600; color:var(--muted); }
+.d-row b{ font-size:12.5px; font-weight:700; color:var(--text); }
+.d-row b.ok{ color:var(--accent-ink); }
+.d-row b.mono{ font-family:var(--mono); font-size:11px; }
+.cta{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:12px; padding:16px; border-radius:16px; background:var(--cta); color:var(--cta-ink); font-size:15px; font-weight:800; letter-spacing:0.03em; text-transform:uppercase; box-shadow:0 16px 34px -16px rgba(0,0,0,.5); transition:background-color .15s var(--ease), transform .15s var(--ease); }
+.cta svg{ width:16px; height:16px; }
+.cta:hover{ background:var(--cta-hover); transform:translateY(-1px); }
+.card-note{ margin:13px 4px 0; font-size:11px; line-height:1.5; color:var(--faint); text-align:center; }
+.card-note a{ color:var(--muted); text-decoration:underline; text-decoration-color:var(--line-2); text-underline-offset:2px; }
+.card-note a:hover{ color:var(--accent-ink); }
+@media (max-width:560px){
+  .brand-name{ font-size:16px; } .btn-app span{ display:none; } .btn-app{ padding:9px 11px; }
+  .stage{ padding:12px 16px; }
+  .lead{ font-size:clamp(18px,5.5vw,24px); margin-bottom:14px; }
+  .swap-card{ padding:18px; } .field{ padding:14px 15px 15px; } .amount b{ font-size:29px; }
+  .hero-chips{ margin-top:12px; }
+}
+@media (max-height:700px){ .lead{ font-size:clamp(17px,4.5vw,21px); margin-bottom:10px; } .hero-chips{ display:none; } }
+@media (max-height:600px){ .field{ padding:12px 15px 13px; } .amount b{ font-size:26px; } .details-btn{ margin-top:8px; padding:9px; } .cta{ padding:14px; margin-top:8px; } }
+@media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
   </style>
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-  <div class="bg" aria-hidden="true"><div class="glow"></div><div class="hatch"></div></div>
+  <a class="skip" href="#route-preview">Skip to preview</a>
+  <div class="bg" aria-hidden="true"></div>
 
+  <div class="app">
   <header class="topbar">
-    <a class="brand" href="./">
-      <img src="favicon.png" width="30" height="30" alt="">
-      <span>Optimism DEX</span>
-    </a>
-    <span class="spacer"></span>
-    <nav class="nav" aria-label="Main Navigation">
-      <a href="how-it-works/">How it works</a>
-      <a href="faq/">FAQ</a>
-      <a href="about/">About</a>
-      <a href="security/">Security</a>
-      <a href="supported-chains/">Supported Chains</a>
-    </nav>
+    <div class="tb-left">
+      <button class="hamb" type="button" id="hamb" aria-label="Open navigation" aria-controls="drawer" aria-expanded="false"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <div class="brand"><span class="brand-logo"><img src="favicon.png" width="22" height="22" alt="Optimism DEX logo"></span><h1 class="brand-name">Optimism DEX</h1></div>
+    </div>
+    <div class="tb-right">
+      <div class="theme-toggle" role="group" aria-label="Color theme">
+        <button type="button" id="theme-light" aria-pressed="true" aria-label="Light theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg></button>
+        <button type="button" id="theme-dark" aria-pressed="false" aria-label="Dark theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a6.5 6.5 0 1 0 10.5 10.5z"/></svg></button>
+      </div>
+      <a class="btn-app" href="dashboard/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M16 11h2"/></svg><span>Open app</span></a>
+    </div>
   </header>
 
-  <main>
-    <section class="wrap hero">
-      <span class="eyebrow"><span class="dot"></span>OP Mainnet Swap</span>
-      <h1>Optimism DEX</h1>
-      <p class="deck">Optimism DEX brings <a class="cite" href="https://www.optimism.io/" rel="nofollow noopener noreferrer">OP Mainnet and the Superchain</a> into a <strong>non-custodial</strong> swap flow built for sharper routing, wallet control, and clean trade review.</p>
-      <div class="cta-row">
-        <a class="primary" href="dashboard/">Open App
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a class="ghost" href="how-it-works/">How it works
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-
-      <section class="routebar" aria-label="Swap preview">
-        <div class="rhead">
-          <span class="ct">Swap on Optimism</span>
-          <span class="pill"><span class="pdot"></span>Preview</span>
-        </div>
-        <div class="rgrid">
-          <div class="leg">
-            <span class="lab">You pay</span>
-            <div class="legrow">
-              <button class="tok" type="button"><img src="op.png" alt="OP">OP <span class="cv" aria-hidden="true">&#9662;</span></button>
-              <span class="gv">Amount in app</span>
-            </div>
-          </div>
-          <button class="rswitch" type="button" data-switch aria-label="Switch direction">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v13M4 14l3 3 3-3M17 20V7M14 10l3-3 3 3"/></svg>
-          </button>
-          <div class="leg">
-            <span class="lab">You receive</span>
-            <div class="legrow">
-              <button class="tok" type="button"><img src="usdc.png" alt="USDC">USDC <span class="cv" aria-hidden="true">&#9662;</span></button>
-              <span class="gv">Live quote in app</span>
-            </div>
-          </div>
-        </div>
-        <div class="rbar-foot">
-          <div class="rmeta">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 5v5l3 3"/></svg>
-            Route, network cost, and expected timing are shown live before you sign.
-          </div>
-          <a class="rcta" href="dashboard/">Open App
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-        <p class="rnote">Preview only &middot; non-custodial &middot; connect your wallet in the app</p>
-      </section>
-    </section>
-
-    <!-- WHY (icon-left rows) -->
-    <section class="wrap sec" id="why">
-      <div class="sec-head">
-        <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg>Why swap here</span>
-        <h2 class="h2">Optimism DEX for self-custody trading</h2>
-      </div>
-      <div class="rows">
-        <div class="frow2">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
-          <div><h3>Keep control from wallet to confirmation</h3><p>Connect a self-custody wallet, choose the asset pair, and approve the swap only after the app presents the transaction details. Private keys stay with you, and the trade is signed from your wallet.</p></div>
-        </div>
-        <div class="frow2">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
-          <div><h3>Built around L2 assets and routes</h3><p>Trade OP, ETH, WETH, <a class="cite" href="https://www.circle.com/usdc" rel="nofollow noopener noreferrer">USDC stablecoin liquidity</a>, and other supported assets surfaced in the app. Optimism keeps activity on an <a class="cite" href="https://ethereum.org/en/layer-2/" rel="nofollow noopener noreferrer">Ethereum layer two network</a> while the app keeps the route readable.</p></div>
-        </div>
-        <div class="frow2">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9 9 0 0 1 9 9 9 9 0 0 1-9 9"/><path d="M3 12h6l2-3 2 6 2-3h2"/></svg></span>
-          <div><h3>Review cost, time, and route before signing</h3><p>Every swap should be judged before it reaches your wallet prompt. Optimism DEX shows the live quote, route path, network cost, and expected timing in the app so you can confirm with context instead of guessing.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="wrap sec" id="how">
-      <div class="sec-head">
-        <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>How it works</span>
-        <h2 class="h2">Swap on Optimism in three steps</h2>
-      </div>
-      <div class="steps">
-        <div class="step"><span class="num">1</span><h3>Connect your wallet</h3><p>Open the app, connect a compatible Web3 wallet such as <a class="cite" href="https://metamask.io/" rel="nofollow noopener noreferrer">MetaMask wallet</a>, and keep custody of your assets throughout the swap.</p></div>
-        <div class="step"><span class="num">2</span><h3>Choose OP Mainnet tokens</h3><p>Select the asset you want to sell and the asset you want to receive. The preview keeps amounts number-free here; the app builds the live route when you trade.</p></div>
-        <div class="step"><span class="num">3</span><h3>Review and confirm</h3><p>Check the quote, route, estimated timing, and network cost. Then approve only the transaction you understand from your wallet confirmation screen.</p></div>
-      </div>
-    </section>
-
-    <!-- FAQ (2-col) -->
-    <section class="wrap sec" id="faq">
-      <div class="sec-head">
-        <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.8.4-1 .8-1 1.7M12 17h.01"/></svg>FAQ</span>
-        <h2 class="h2">Optimism DEX questions, answered</h2>
-      </div>
-      <div class="faq">
-        <div class="qa"><span class="qn">01</span><h3>What is Optimism DEX?</h3><p>Optimism DEX is a non-custodial DeFi app for swapping tokens on Optimism. It focuses on wallet-based trading, live route review, and clear confirmation before funds move.</p></div>
-        <div class="qa"><span class="qn">02</span><h3>Which chains and assets are supported?</h3><p>The app is built for Optimism-focused swaps and supported OP Mainnet assets, including OP, ETH, WETH, USDC, and other tokens available in the app. See the full list on the <a href="supported-chains/">supported chains</a> page.</p></div>
-        <div class="qa"><span class="qn">03</span><h3>How long does a swap take?</h3><p>Timing depends on wallet confirmation, network conditions, route complexity, and token approvals. The app shows expected timing before you sign so you can decide with current information.</p></div>
-        <div class="qa"><span class="qn">04</span><h3>How much does it cost to use?</h3><p>Network costs and any route-specific costs are shown in the app before confirmation. You can also review completed transactions with an <a class="cite" href="https://optimistic.etherscan.io/" rel="nofollow noopener noreferrer">OP Mainnet explorer</a> after signing.</p></div>
-        <div class="qa"><span class="qn">05</span><h3>Is Optimism DEX custodial?</h3><p>No. You connect your wallet and sign transactions yourself. The app does not require a deposit account, and it does not take custody of your private keys.</p></div>
-        <div class="qa"><span class="qn">06</span><h3>What should I check before swapping?</h3><p>Confirm the token contract, receiving asset, route, wallet network, slippage settings, and total cost. If anything looks wrong, reject the wallet prompt and restart the quote.</p></div>
-      </div>
-    </section>
-
-    <section class="wrap sec" id="more">
-      <div class="sec-head">
-        <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1"/></svg>Learn more</span>
-        <h2 class="h2">Explore Optimism DEX</h2>
-      </div>
-      <div class="related">
-        <a class="rel" href="how-it-works/"><span class="rt">How it works <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><p>Walk through the Optimism DEX flow from wallet connection to route review and confirmation.</p></a>
-        <a class="rel" href="security/"><span class="rt">Security <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><p>Understand self-custody, wallet prompts, approvals, token checks, and safer swap habits.</p></a>
-        <a class="rel" href="supported-chains/"><span class="rt">Supported chains <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><p>Review the networks and assets available for Optimism-focused swaps inside the app.</p></a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap">
-      
+  <div class="scrim" id="scrim" tabindex="-1"></div>
+  <aside class="drawer" id="drawer" aria-label="Primary" aria-hidden="true">
+    <div class="drawer-head">
+      <div class="brand"><span class="brand-logo"><img src="favicon.png" width="22" height="22" alt=""></span><span class="brand-name">Optimism DEX</span></div>
+      <button class="drawer-close" type="button" id="drawer-close" aria-label="Close navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     </div>
-  </footer>
+    <nav aria-label="Sections">
+      <p class="nav-label">Bridge</p>
+      <a class="nav-item is-active" href="#route-preview" aria-current="page"><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 10h11l-3-3M17 14H6l3 3"/></svg>Route preview</a>
+      <p class="nav-label">Understand</p>
+      <details class="nav-group" open><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>DEX and network basics<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://optimism.io/blog/what-is-op-mainnet" target="_blank" rel="noopener noreferrer">OP Mainnet overview <small>Official network definition</small></a><a href="https://docs.optimism.io/op-stack/protocol/overview" target="_blank" rel="noopener noreferrer">Rollup protocol overview <small>How Optimism settles</small></a><a href="https://ethereum.org/defi/" target="_blank" rel="noopener noreferrer">Ethereum DeFi guide <small>DEX and DeFi basics</small></a><a href="https://en.wikipedia.org/wiki/Decentralized_finance#Decentralized_exchanges" target="_blank" rel="noopener noreferrer">Decentralized exchanges <small>Independent concept reference</small></a><a href="https://l2beat.com/scaling/projects/op-mainnet" target="_blank" rel="noopener noreferrer">OP Mainnet on L2BEAT <small>Rollup risks and architecture</small></a></div></details>
+      <p class="nav-label">Markets &amp; data</p>
+      <details class="nav-group"><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>Liquidity and activity<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://defillama.com/chain/op-mainnet" target="_blank" rel="noopener noreferrer">OP Mainnet TVL <small>Chain liquidity dashboard</small></a><a href="https://defillama.com/dexs?category=Dexes&chain=optimism" target="_blank" rel="noopener noreferrer">Optimism DEX volume <small>Exchange volume rankings</small></a><a href="https://www.coingecko.com/en/chains/optimistic-ethereum" target="_blank" rel="noopener noreferrer">Optimism blockchain data <small>Coins pools and activity</small></a><a href="https://www.growthepie.com/chains/optimism" target="_blank" rel="noopener noreferrer">Optimism analytics <small>L2 usage metrics</small></a><a href="https://explorer.optimism.io/stats" target="_blank" rel="noopener noreferrer">OP Mainnet explorer stats <small>Blocks transactions and gas</small></a></div></details>
+      <p class="nav-label">Guides</p>
+      <details class="nav-group"><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>Connect, fund and swap<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://docs.optimism.io/op-mainnet/network-information/connecting-to-op" target="_blank" rel="noopener noreferrer">Connect to OP Mainnet <small>RPC wallet network settings</small></a><a href="https://app.optimism.io/" target="_blank" rel="noopener noreferrer">OP Mainnet Gateway <small>Official bridge interface</small></a><a href="https://ethereum.org/guides/how-to-swap-tokens/" target="_blank" rel="noopener noreferrer">How to swap tokens <small>Ethereum swap walkthrough</small></a><a href="https://support.uniswap.org/hc/en-us/articles/8370549680909-How-to-swap-tokens-with-the-Uniswap-web-app" target="_blank" rel="noopener noreferrer">Swap with Uniswap <small>Web app swap steps</small></a><a href="https://docs.optimism.io/app-developers/guides/bridging/standard-bridge" target="_blank" rel="noopener noreferrer">Use the Standard Bridge <small>Deposit withdrawal mechanics</small></a></div></details>
+      <p class="nav-label">Safety</p>
+      <details class="nav-group"><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>Verify before trading<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://docs.optimism.io/op-stack/security/faq-sec-model" target="_blank" rel="noopener noreferrer">OP Stack security model <small>Trust assumptions explained</small></a><a href="https://docs.optimism.io/op-stack/security/audit-reports" target="_blank" rel="noopener noreferrer">OP Stack audit reports <small>Published security reviews</small></a><a href="https://explorer.optimism.io/essential-dapps/revoke" target="_blank" rel="noopener noreferrer">Review token approvals <small>Inspect and revoke permissions</small></a><a href="https://status.optimism.io/" target="_blank" rel="noopener noreferrer">Optimism network status <small>Live service health</small></a><a href="https://github.com/ethereum-optimism/optimism" target="_blank" rel="noopener noreferrer">Optimism source code <small>Official protocol repository</small></a><a href="https://ethereum.org/community/support/scams/" target="_blank" rel="noopener noreferrer">Scam help and reporting <small>Phishing response guidance</small></a></div></details>
+    </nav>
+    <div class="drawer-foot">
+      <p class="disclose"><strong>Independent dashboard.</strong> Not affiliated with any protocol or issuer named here.</p>
+      <p class="fine">Live figures come from public third-party sources and change. Educational reference only.</p>
+    </div>
+  </aside>
 
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[
-    {"@type":"WebSite","@id":"https://optimism-dex.github.io/#website","url":"https://optimism-dex.github.io/","name":"Optimism DEX"},
-    {"@type":"Organization","@id":"https://optimism-dex.github.io/#org","name":"Optimism DEX","url":"https://optimism-dex.github.io/","logo":"https://optimism-dex.github.io/favicon.png"},
-    {"@type":"WebApplication","name":"Optimism DEX","applicationCategory":"FinanceApplication","operatingSystem":"Web","url":"https://optimism-dex.github.io/","browserRequirements":"Requires a Web3 wallet","description":"Non-custodial DeFi app for swapping tokens on Optimism with wallet-based confirmation, live route review, and clear transaction context."},
-    {"@type":"FAQPage","mainEntity":[
-      {"@type":"Question","name":"What is Optimism DEX?","acceptedAnswer":{"@type":"Answer","text":"Optimism DEX is a non-custodial DeFi app for swapping tokens on Optimism. It focuses on wallet-based trading, live route review, and clear confirmation before funds move."}},
-      {"@type":"Question","name":"Which chains and assets are supported?","acceptedAnswer":{"@type":"Answer","text":"The app is built for Optimism-focused swaps and supported OP Mainnet assets, including OP, ETH, WETH, USDC, and other tokens available in the app. See the full list on the supported chains page."}},
-      {"@type":"Question","name":"How long does a swap take?","acceptedAnswer":{"@type":"Answer","text":"Timing depends on wallet confirmation, network conditions, route complexity, and token approvals. The app shows expected timing before you sign so you can decide with current information."}},
-      {"@type":"Question","name":"How much does it cost to use?","acceptedAnswer":{"@type":"Answer","text":"Network costs and any route-specific costs are shown in the app before confirmation. You can also review completed transactions with an OP Mainnet explorer after signing."}},
-      {"@type":"Question","name":"Is Optimism DEX custodial?","acceptedAnswer":{"@type":"Answer","text":"No. You connect your wallet and sign transactions yourself. The app does not require a deposit account, and it does not take custody of your private keys."}},
-      {"@type":"Question","name":"What should I check before swapping?","acceptedAnswer":{"@type":"Answer","text":"Confirm the token contract, receiving asset, route, wallet network, slippage settings, and total cost. If anything looks wrong, reject the wallet prompt and restart the quote."}}
-    ]}
-  ]}
-  </script>
+  <div class="wrap">
+    <main class="stage">
+      <h2 class="lead">Swap tokens on <span class="hl">Optimism</span></h2>
+      <div class="swap-card" id="route-preview" aria-label="Optimism DEX preview">
+          <div class="card-head"><span class="card-title">Optimism swap route</span><span class="badge"><i aria-hidden="true"></i> Preview</span></div>
+          <div class="field">
+            <div class="field-top"><span class="field-label">You send</span><span class="field-bal">Illustrative</span></div>
+            <div class="field-row"><div class="amount"><b>1.00</b><span id="sub-from">on OP</span></div>
+              <span class="token-pill" id="pill-from"><img src="op.png" alt="OP token logo" width="26" height="26"><span class="token-meta"><small>From</small><b>OP</b></span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span></div>
+          </div>
+          <button class="reverse" type="button" id="reverse" aria-label="Reverse direction" title="Reverse direction"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 4v13M8 4L4 8M8 4l4 4M16 20V7M16 20l-4-4M16 20l4-4"/></svg></button>
+          <div class="field">
+            <div class="field-top"><span class="field-label">You receive</span><span class="field-bal">minus gas</span></div>
+            <div class="field-row"><div class="amount"><b>≈ 1.00</b><span id="sub-to">on USDC</span></div>
+              <span class="token-pill" id="pill-to"><img src="usdc.png" alt="USDC token logo" width="26" height="26"><span class="token-meta"><small>To</small><b>USDC</b></span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span></div>
+          </div>
+          <button class="details-btn" type="button" id="details-btn" aria-expanded="false" aria-controls="details">Show details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="details" id="details">
+            <div class="d-row"><span>Network</span><b>OP Mainnet</b></div>
+            <div class="d-row"><span>Chain ID</span><b>10</b></div>
+            <div class="d-row"><span>Settlement layer</span><b>Ethereum</b></div>
+            <div class="d-row"><span>Gas token</span><b>ETH</b></div>
+          </div>
+          <a class="cta" href="dashboard/" target="_blank" rel="noopener noreferrer">Open app <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          
+      </div>
+      <div class="hero-chips">
+        <a class="hchip" href="https://www.coingecko.com/en/coins/optimism" target="_blank" rel="noopener noreferrer">OP price <b id="sig0">—</b> <span class="ext" aria-hidden="true">↗</span></a>
+          <a class="hchip" href="https://defillama.com/chain/op-mainnet" target="_blank" rel="noopener noreferrer">OP Mainnet TVL <b id="sig1">—</b> <span class="ext" aria-hidden="true">↗</span></a>
+          <a class="hchip" href="https://docs.optimism.io/op-mainnet/network-information/connecting-to-op" target="_blank" rel="noopener noreferrer">OP gas <b id="sig2">—</b> <span class="ext" aria-hidden="true">↗</span></a>
+      </div>
+    </main>
+  </div>
+  </div>
 
   <script>
-  (function(){"use strict";var b=document.querySelector("[data-switch]");if(!b)return;b.addEventListener("click",function(){var p=document.querySelectorAll(".rgrid .tok");if(p.length<2)return;var t=p[0].innerHTML;p[0].innerHTML=p[1].innerHTML;p[1].innerHTML=t;});}());
+  (function(){
+    "use strict";
+    var $=function(id){ return document.getElementById(id); };
+    var root=document.documentElement, tl=$("theme-light"), td=$("theme-dark");
+    function applyTheme(t){ if(t==="dark"){ root.setAttribute("data-theme","dark"); } else { root.removeAttribute("data-theme"); } if(tl) tl.setAttribute("aria-pressed", String(t!=="dark")); if(td) td.setAttribute("aria-pressed", String(t==="dark")); }
+    var saved=null; try{ saved=localStorage.getItem("optimismde-theme"); }catch(e){}
+    if(saved) applyTheme(saved);
+    function setTheme(t){ applyTheme(t); try{ localStorage.setItem("optimismde-theme", t); }catch(e){} }
+    if(tl) tl.addEventListener("click", function(){ setTheme("light"); });
+    if(td) td.addEventListener("click", function(){ setTheme("dark"); });
+    var body=document.body, hamb=$("hamb"), scrim=$("scrim"), drawer=$("drawer"), dclose=$("drawer-close");
+    function openD(){ body.classList.add("drawer-open"); hamb.setAttribute("aria-expanded","true"); drawer.setAttribute("aria-hidden","false"); }
+    function closeD(){ body.classList.remove("drawer-open"); hamb.setAttribute("aria-expanded","false"); drawer.setAttribute("aria-hidden","true"); }
+    if(hamb) hamb.addEventListener("click", function(){ body.classList.contains("drawer-open")?closeD():openD(); });
+    if(scrim) scrim.addEventListener("click", closeD);
+    if(dclose) dclose.addEventListener("click", closeD);
+    document.addEventListener("keydown", function(e){ if(e.key==="Escape" && body.classList.contains("drawer-open")) closeD(); });
+    if(drawer) drawer.addEventListener("click", function(e){ if(e.target.closest("a")) closeD(); });
+    var reversed=false;
+    var TOK={ A:{img:"op.png",name:"OP",sub:"on OP",alt:"OP token logo"}, B:{img:"usdc.png",name:"USDC",sub:"on USDC",alt:"USDC token logo"} };
+    var chev='<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
+    function pill(role,k){ var n=TOK[k]; return '<img src="'+n.img+'" alt="'+n.alt+'" width="26" height="26"><span class="token-meta"><small>'+role+'</small><b>'+n.name+'</b></span>'+chev; }
+    function render(){ var a=reversed?"B":"A", b=reversed?"A":"B"; $("pill-from").innerHTML=pill("From",a); $("pill-to").innerHTML=pill("To",b); $("sub-from").textContent=TOK[a].sub; $("sub-to").textContent=TOK[b].sub; }
+    var rev=$("reverse"); if(rev) rev.addEventListener("click", function(){ reversed=!reversed; render(); });
+    var db=$("details-btn"), dp=$("details");
+    if(db&&dp) db.addEventListener("click", function(){ var open=dp.classList.toggle("open"); db.setAttribute("aria-expanded", String(open)); db.firstChild.textContent = open?"Hide details ":"Show details "; });
+    function money(n){ if(n>=1e9) return "$"+(n/1e9).toFixed(2)+"B"; if(n>=1e6) return "$"+(n/1e6).toFixed(1)+"M"; if(n>=1e3) return "$"+(n/1e3).toFixed(0)+"K"; return "$"+n.toFixed(0); }
+    function gwei(g){ return (g>=0.1?g.toFixed(2):(g>=0.001?g.toFixed(3):Number(g.toPrecision(2)).toString()))+" gwei"; }
+    function grab(url,opt){ var c="AbortController" in window ? new AbortController():null, t=c?setTimeout(function(){c.abort();},7000):null; var o=opt||{}; if(c) o.signal=c.signal; return fetch(url,o).then(function(r){ if(!r.ok) throw 0; return r.json(); }).finally(function(){ if(t) clearTimeout(t); }); }
+    grab("https://coins.llama.fi/prices/current/coingecko:optimism").then(function(j){ var c=j&&j.coins&&j.coins["coingecko:optimism"], v=c&&Number(c.price); if(isFinite(v)&&v>0) $("sig0").textContent="$"+v.toLocaleString("en-US",{maximumFractionDigits:2}); }).catch(function(){});
+    grab("https://api.llama.fi/v2/historicalChainTvl/OP%20Mainnet").then(function(a){ if(!a||!a.length) return; var v=Number(a[a.length-1].tvl); if(isFinite(v)&&v>0) $("sig1").textContent=money(v); }).catch(function(){});
+    grab("https://mainnet.optimism.io",{ method:"POST", headers:{"Content-Type":"application/json"}, body:'{"jsonrpc":"2.0","id":1,"method":"eth_gasPrice","params":[]}' }).then(function(j){ var wei=j&&j.result?parseInt(j.result,16):NaN; if(isFinite(wei)&&wei>0) $("sig2").textContent=gwei(wei/1e9); }).catch(function(){});
+  })();
   </script>
 </body>
 </html>

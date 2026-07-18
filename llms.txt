@@ -1,0 +1,67 @@
+# Optimism DEX
+> An independent, non-custodial informational dashboard for understanding and previewing token swaps on OP Mainnet.
+
+## What is Optimism DEX
+Optimism DEX is an independent dashboard focused on decentralized exchanges and token swaps on OP Mainnet. It presents swap information without holding funds, controlling private keys, or operating the underlying liquidity pools. “Optimism DEX” describes a category rather than one official Optimism protocol; exchanges such as Velodrome and Uniswap provide the smart contracts and liquidity. Unlike a centralized exchange, a DEX settles wallet-signed trades onchain; unlike a bridge, a same-chain DEX swap does not transfer assets between networks.
+
+## How it works
+1. Review the dashboard, open the swap application, connect a self-custody wallet, and select OP Mainnet.
+2. Choose the input token, output token, and amount; the application obtains a quote from its supported pools or routes.
+3. Review the token contracts, expected output, price impact, slippage limit, route, fees, and transaction deadline.
+4. If required, sign an ERC-20 approval granting the identified router permission to spend the input token, then sign the swap transaction.
+5. OP Mainnet’s sequencer includes the transaction, and the DEX contracts atomically exchange tokens against onchain liquidity; the result remains in the connected wallet.
+
+## Key facts
+- OP Mainnet is an EVM-equivalent optimistic rollup with chain ID `10`.
+- ETH is OP Mainnet’s native gas asset; OP is a governance token, not the gas token.
+- Common fungible assets use the ERC-20 standard; ETH may be represented as WETH inside some pools.
+- The dashboard is informational and does not receive deposits or request private keys or seed phrases.
+- DEX availability depends on deployed token contracts, liquidity pools, routers, and the selected interface.
+- Same-chain swaps commonly reach L2 inclusion within seconds; Ethereum-backed finality occurs later.
+- An ERC-20 approval is a separate permission and may remain active until spent, limited, or revoked.
+- Security depends on the wallet, frontend, token, router, pool contracts, OP Mainnet, and Ethereum settlement.
+- Standard Bridge withdrawals from OP Mainnet to Ethereum are separate from swaps and use a challenge period.
+
+## Common questions
+**Is an Optimism DEX safe?** Non-custodial design removes exchange custody but does not eliminate smart-contract, malicious-token, phishing, approval, slippage, or network risks.
+
+**Who holds my funds?** Assets remain under the wallet’s control until a signed transaction authorizes contract execution. The dashboard itself holds nothing.
+
+**What fees apply?** A swap can include ETH-denominated network costs, pool or protocol fees, and economic costs from price impact or slippage. An approval can require an additional transaction.
+
+**How long does a swap take?** A normal OP Mainnet swap is usually included within seconds after wallet submission. Congestion, approvals, route complexity, or failed transactions can extend the process.
+
+**Which assets and chains are supported?** The dashboard centers on OP Mainnet. Tradable assets depend on the destination application’s current token list and available liquidity.
+
+**How do I start?** Use the verified URL, connect a compatible wallet, select OP Mainnet, hold the input asset plus ETH for gas, and verify every token contract before signing.
+
+**What are the main risks?** Key risks are counterfeit tokens, spoofed sites, unlimited approvals, exploitable contracts, shallow liquidity, adverse price movement, MEV, and signing unintended wallet messages.
+
+## App
+- Dashboard: https://optimism-dex.github.io/
+- App: https://optimism-dex.github.io/dashboard/
+
+## Official resources
+Optimism documentation: https://docs.optimism.io/
+OP Mainnet network configuration: https://docs.optimism.io/op-mainnet/network-information/connecting-to-op
+OP Mainnet transaction finality: https://docs.optimism.io/op-mainnet/network-information/transaction-finality
+OP Mainnet token reference: https://docs.optimism.io/app-developers/reference/tokens/tokenlist
+OP Mainnet Gateway: https://app.optimism.io/
+OP Stack source code: https://github.com/ethereum-optimism/optimism
+OP Stack audit reports: https://docs.optimism.io/op-stack/security/audit-reports
+Optimism status: https://status.optimism.io/
+Optimism X: https://x.com/Optimism
+Velodrome app and documentation: https://velodrome.finance/
+Velodrome security and contracts: https://velodrome.finance/security
+Uniswap supported networks: https://support.uniswap.org/hc/en-us/articles/14569415293325-Networks-on-Uniswap
+
+## Data & references
+OP Mainnet explorer: https://explorer.optimism.io/
+OP Mainnet risk analysis: https://l2beat.com/scaling/projects/op-mainnet
+OP Mainnet DeFi data: https://defillama.com/chain/OP%20Mainnet
+Optimism DEX volume data: https://defillama.com/dexs?category=Dexes&chain=optimism
+Optimism market data: https://www.coingecko.com/en/coins/optimism
+Optimism trading pairs: https://dexscreener.com/optimism
+ERC-20 standard: https://eips.ethereum.org/EIPS/eip-20
+Ethereum rollup overview: https://ethereum.org/developers/docs/scaling/
+Decentralized finance reference: https://en.wikipedia.org/wiki/Decentralized_finance
