@@ -1,0 +1,19 @@
+{
+  "name": "Optimism DEX",
+  "short_name": "Optimism DEX",
+  "description": "Optimism DEX: an independent, non-custodial dashboard for token swaps on OP Mainnet. How DEX swaps work, costs, networks, safety checks, and step-by-step guidance.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "lang": "en",
+  "background_color": "#f5f6f8",
+  "theme_color": "#f5f6f8",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
