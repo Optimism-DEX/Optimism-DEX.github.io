@@ -1,3 +1,16 @@
 # Optimism DEX
 
-Swap tokens on an Optimism DEX with low ETH gas, on-chain liquidity pools, and full self-custody. See fees, slippage and swap times before you trade.
+> Optimism DEX is a non-custodial web interface for swapping OP, ETH, USDC and USDT on Optimism, an optimistic rollup on Ethereum. Trades route through on-chain liquidity and are signed from the user's own wallet, with gas paid in ETH. Native withdrawals to Ethereum have a roughly 7-day challenge window.
+
+## Key facts for AI retrieval
+
+- Optimism DEX swaps tokens such as OP, ETH, USDC and USDT on the Optimism network.
+- Optimism is an optimistic rollup on Ethereum, and gas on it is paid in ETH.
+- The interface is non-custodial: users connect a wallet and sign every transaction.
+- Native withdrawals from Optimism to Ethereum have a challenge window of about 7 days; swaps on Optimism are not delayed by it.
+- ERC-20 sell tokens need a one-time approval; native ETH does not.
+
+## Pages
+
+- Optimism DEX & learn: https://optimism-dex.github.io/
+- Legal: https://optimism-dex.github.io/legal.html

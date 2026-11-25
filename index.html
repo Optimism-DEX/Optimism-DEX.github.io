@@ -1,249 +1,283 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Optimism DEX — Swap Tokens on Optimism L2</title>
-<meta name="description" content="Swap tokens on an Optimism DEX with low ETH gas, on-chain liquidity pools, and full self-custody. See fees, slippage and swap times before you trade.">
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Optimism DEX — Swap OP, ETH, USDC and USDT</title>
+<meta name="description" content="Optimism DEX is a non-custodial interface to swap OP, ETH, USDC and USDT on Optimism, an Ethereum optimistic rollup, with gas paid in ETH from your own wallet.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#f6f5f4">
 <link rel="canonical" href="https://optimism-dex.github.io/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Optimism DEX">
-<meta property="og:url" content="https://optimism-dex.github.io/">
-<meta property="og:image" content="https://optimism-dex.github.io/og.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Optimism DEX">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Albert+Sans:wght@500;600;700&display=swap">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://optimism-dex.github.io/#website", "url": "https://optimism-dex.github.io/", "name": "Optimism DEX — Swap Tokens on Optimism L2"}, {"@type": "WebPage", "@id": "https://optimism-dex.github.io/#webpage", "url": "https://optimism-dex.github.io/", "name": "Optimism DEX — Swap Tokens on Optimism L2", "isPartOf": {"@id": "https://optimism-dex.github.io/#website"}, "description": "Swap tokens on an Optimism DEX with low ETH gas, on-chain liquidity pools, and full self-custody. See fees, slippage and swap times before you trade.", "datePublished": "2026-11-03", "dateModified": "2026-11-03"}, {"@type": "SoftwareApplication", "name": "Optimism DEX", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://optimism-dex.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Swaps"}, {"@type": "ListItem", "position": 3, "name": "Optimism DEX"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is an Optimism DEX?", "acceptedAnswer": {"@type": "Answer", "text": "An Optimism DEX is a decentralized exchange built on the Optimism network, letting you swap tokens against on-chain liquidity pools from a self-custody wallet while paying gas in ETH instead of a separate token."}}, {"@type": "Question", "name": "Do I need ETH to trade on Optimism?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Optimism charges network gas in ETH, so you need a small ETH balance on the network to cover approvals and swaps, separate from any ETH you're trading."}}, {"@type": "Question", "name": "Which protocol is best for stablecoin swaps on Optimism?", "acceptedAnswer": {"@type": "Answer", "text": "Protocols built around concentrated, correlated-asset pools, such as Velodrome, generally offer lower slippage for stablecoin and ETH pairs than general-purpose pools."}}, {"@type": "Question", "name": "Is swapping on an Optimism DEX cheaper than Ethereum mainnet?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, substantially. Optimism batches and compresses transaction data before settling to Ethereum, which is why swap gas on the network typically costs a small fraction of a mainnet swap."}}, {"@type": "Question", "name": "What happens if a swap fails?", "acceptedAnswer": {"@type": "Answer", "text": "A failed transaction reverts on-chain; you keep your tokens and only lose the small gas fee spent attempting it. Nothing moves until the transaction confirms successfully."}}, {"@type": "Question", "name": "Can slippage cause my swap to fail?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If the pool price moves beyond your slippage tolerance before the transaction confirms, the swap reverts rather than filling at a worse rate than you allowed."}}, {"@type": "Question", "name": "Do I keep custody of my funds on an Optimism DEX?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You connect your own wallet, sign each transaction yourself, and the exchange never takes custody of your tokens at any point."}}]}]}</script>
+<meta property="og:type" content="website"><meta property="og:site_name" content="Optimism DEX"><meta property="og:title" content="Optimism DEX — Swap OP, ETH, USDC and USDT"><meta property="og:description" content="Optimism DEX is a non-custodial interface to swap OP, ETH, USDC and USDT on Optimism, an Ethereum optimistic rollup, with gas paid in ETH from your own wallet."><meta property="og:url" content="https://optimism-dex.github.io/"><meta property="og:image" content="https://optimism-dex.github.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Optimism DEX — Swap OP, ETH, USDC and USDT"><meta name="twitter:description" content="Optimism DEX is a non-custodial interface to swap OP, ETH, USDC and USDT on Optimism, an Ethereum optimistic rollup, with gas paid in ETH from your own wallet."><meta name="twitter:image" content="https://optimism-dex.github.io/og-image.png">
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="manifest" href="manifest.webmanifest">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://optimism-dex.github.io/#organization","name":"Optimism DEX","url":"https://optimism-dex.github.io/","description":"Optimism DEX is a non-custodial interface to swap OP, ETH, USDC and USDT on Optimism, an Ethereum optimistic rollup, with gas paid in ETH from your own wallet.","logo":{"@type":"ImageObject","@id":"https://optimism-dex.github.io/#logo","url":"https://optimism-dex.github.io/icon.svg","caption":"Optimism DEX"}},{"@type":"WebSite","@id":"https://optimism-dex.github.io/#website","url":"https://optimism-dex.github.io/","publisher":{"@id":"https://optimism-dex.github.io/#organization"},"name":"Optimism DEX"},{"@type":"WebPage","@id":"https://optimism-dex.github.io/#webpage","url":"https://optimism-dex.github.io/","publisher":{"@id":"https://optimism-dex.github.io/#organization"},"name":"Optimism DEX — Swap OP, ETH, USDC and USDT","isPartOf":{"@id":"https://optimism-dex.github.io/#website"},"mainEntity":{"@id":"https://optimism-dex.github.io/#app"},"breadcrumb":{"@id":"https://optimism-dex.github.io/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://optimism-dex.github.io/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://optimism-dex.github.io/"},{"@type":"ListItem","position":2,"name":"Optimism DEX","item":"https://optimism-dex.github.io/"}]},{"@type":"WebApplication","@id":"https://optimism-dex.github.io/#app","url":"https://optimism-dex.github.io/","publisher":{"@id":"https://optimism-dex.github.io/#organization"},"name":"Optimism DEX","applicationCategory":"FinanceApplication","operatingSystem":"Web","description":"Optimism DEX is a non-custodial interface to swap OP, ETH, USDC and USDT on Optimism, an Ethereum optimistic rollup, with gas paid in ETH from your own wallet.","isPartOf":{"@id":"https://optimism-dex.github.io/#website"}},{"@type":"FAQPage","@id":"https://optimism-dex.github.io/#faq","isPartOf":{"@id":"https://optimism-dex.github.io/#webpage"},"about":{"@id":"https://optimism-dex.github.io/#app"},"name":"Optimism DEX FAQ","mainEntity":[{"@type":"Question","name":"What is Optimism DEX?","acceptedAnswer":{"@type":"Answer","text":"It is a non-custodial interface for swapping OP, ETH, USDC, USDT and other tokens on Optimism. You connect your wallet, review a quote and sign each transaction yourself."}},{"@type":"Question","name":"What do I need to pay gas on Optimism?","acceptedAnswer":{"@type":"Answer","text":"You need ETH on the Optimism network. Gas is always paid in ETH, so keep a small balance even when you trade OP or stablecoins."}},{"@type":"Question","name":"How long does a native withdrawal to Ethereum take?","acceptedAnswer":{"@type":"Answer","text":"Withdrawals through the native bridge of an optimistic rollup have a challenge window of about 7 days before funds are final on Ethereum. Swapping on Optimism itself is not affected by this window."}},{"@type":"Question","name":"How do I get funds onto Optimism?","acceptedAnswer":{"@type":"Answer","text":"Use a bridge to move assets from Ethereum or another supported network onto Optimism. The bridge shows its own fee and timing, and the swap interface works with tokens already on Optimism."}},{"@type":"Question","name":"Why is a token approval needed?","acceptedAnswer":{"@type":"Answer","text":"ERC-20 tokens such as OP, USDC and USDT need a one-time allowance before a router can move them for you. The approval is a separate transaction that costs a little gas. Native ETH needs none."}},{"@type":"Question","name":"Do I need an account to swap?","acceptedAnswer":{"@type":"Answer","text":"No. A wallet is enough, with no sign-up or identity check on the interface. Your funds stay in your wallet unless you approve and sign a swap."}}]}]}
+</script>
 <style>
-:root{--bg:#130B0D;--surface:#201316;--text:#F4E9EC;--muted:#A4868C;--accent:#F43F5E;--accent-ink:#FFFFFF;--radius:12px;--display:"Albert Sans";--body:"Albert Sans"}
+@font-face{font-family:'Inter';src:url('assets/inter.woff2') format('woff2');font-weight:400 700;font-display:swap}
+@font-face{font-family:'Space Grotesk';src:url('assets/space-grotesk.woff2') format('woff2');font-weight:500 700;font-display:swap}
+:root{
+ --bg:#f6f5f4;--card:#fff;--ink:#17181c;--muted:#737b88;--faint:#aeb4bf;
+ --line:#ecebe9;--line-2:#e3e1de;--panel:#f8f7f6;--panel-2:#efedeb;
+ --accent:#ff0420;--accent-hover:#e0041c;--accent-ink:#bf0318;--accent-soft:#ffdce0;--accent-on:#ffffff;--promo:#ffe6e9;--text-2:#4b5563;
+ --shadow:0 1px 2px rgba(13,17,28,.04),0 24px 56px -40px rgba(13,17,28,.24);--pico-bg:#fff;--pico-ring:rgba(13,17,28,.06);
+ --ease:cubic-bezier(.2,.7,.2,1);
+ --head:"Space Grotesk","Arial",sans-serif;--body:"Inter","Arial",sans-serif;color-scheme:light}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:2rem}
-body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.7 var(--body);-webkit-font-smoothing:antialiased}
-a{color:var(--accent);text-underline-offset:.22em}
-a:hover{text-decoration-thickness:2px}
-button,input,select,textarea{font:inherit}
-:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
-::selection{background:var(--accent);color:var(--accent-ink)}
-.c234f6c{width:min(1180px,calc(100% - 64px));margin-inline:auto}
-.c5731ac{position:absolute;top:1rem;left:1rem;z-index:5;padding:.6rem 1rem;background:var(--surface);border-radius:var(--radius);transform:translateY(-200%)}
-.c5731ac:focus{transform:translateY(0)}
-.cbdefd3{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:96px;border-bottom:1px solid color-mix(in srgb,var(--text) 10%,transparent)}
-.c8325dd{display:inline-flex;align-items:center;gap:.7rem;color:var(--text);font:650 1.1rem/1.2 var(--display);text-decoration:none}
-.c426100{display:grid;place-items:center;width:36px;height:36px;background:var(--accent);color:var(--accent-ink);border-radius:calc(var(--radius) * .6)}
-.c426100 svg{width:22px;height:22px;fill:none;stroke:var(--accent-ink);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.c03d3cb{display:flex;align-items:center;gap:1.7rem}
-.c03d3cb>a:not(.cdb9fd1){color:var(--muted);font-size:.9rem;text-decoration:none}
-.c03d3cb>a:hover{color:var(--text)}
-.cdb9fd1{padding:.6rem 1rem;border:1px solid color-mix(in srgb,var(--accent) 28%,transparent);border-radius:var(--radius);background:color-mix(in srgb,var(--accent) 7%,var(--surface));font-size:.9rem;font-weight:650;text-decoration:none}
-.c16da08{padding-top:1.8rem;font-size:.82rem;color:var(--muted)}
-.cf03d94{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin:0;padding:0;list-style:none;color:var(--muted);font-size:.82rem}
-.cf03d94 ol,.cf03d94 ul{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin:0;padding:0;list-style:none}
-.cf03d94 a{color:var(--muted)}
-.cf03d94 [aria-current]{color:var(--text)}
-.c92eef3{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);align-items:start;gap:clamp(1.75rem,5vw,4rem);padding:2.25rem 0 3.5rem}
-.cf8756e{min-width:0}
-.cbeef2c{display:inline-flex;align-items:center;gap:.6rem;margin:0 0 1.4rem;color:var(--muted);font-size:.88rem}
-.cbeef2c::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 10%,transparent)}
-h1{margin:0;font:550 clamp(2.6rem,4.9vw,4.65rem)/1.07 var(--display);letter-spacing:-.055em;overflow-wrap:anywhere;text-wrap:balance}
-h1 a{color:var(--accent)}
-.cf9bbd7{max-width:48ch;margin:1.6rem 0 2rem;color:var(--muted);font-size:1.07rem;line-height:1.8}
-.cd11686{display:inline-flex;justify-content:center;align-items:center;gap:1.6rem;min-height:54px;padding:.9rem 1.4rem;border:1px solid color-mix(in srgb,var(--accent) 70%,var(--text));border-radius:var(--radius);background:linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent) 88%,var(--text)));color:var(--accent-ink);font-weight:650;text-decoration:none;box-shadow:0 8px 22px color-mix(in srgb,var(--accent) 20%,transparent);transition:transform .2s ease,box-shadow .2s ease}
-.cd11686:hover{transform:translateY(-2px);box-shadow:0 12px 28px color-mix(in srgb,var(--accent) 28%,transparent)}
-.cd8d005{font-size:1.25rem;line-height:1}
-.c61c1d0{margin:1rem 0 0;color:var(--muted);font-size:.8rem}
-.c151649{position:relative;min-width:0;padding:12px;border:1px solid color-mix(in srgb,var(--accent) 15%,transparent);border-radius:calc(var(--radius) + 12px);background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 14%,var(--bg)),color-mix(in srgb,var(--accent) 3%,var(--bg)));box-shadow:0 30px 70px -25px color-mix(in srgb,var(--text) 20%,transparent)}
-.c2267fa{padding:clamp(1.25rem,3vw,2rem);border:1px solid color-mix(in srgb,var(--text) 8%,transparent);border-radius:var(--radius);background:var(--surface);box-shadow:0 4px 14px color-mix(in srgb,var(--text) 4%,transparent)}
-.c955eea{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1.65rem}
-.c955eea h2{margin:0;font:600 1.2rem/1.3 var(--display);letter-spacing:-.025em}
-.cb179f8{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .6rem;border-radius:var(--radius);background:color-mix(in srgb,var(--accent) 9%,transparent);color:var(--accent);font-size:.72rem;white-space:nowrap}
-.cb179f8::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent)}
-.caad16b{display:block;margin-bottom:.5rem;font-size:.83rem;font-weight:600}
-.c997553{display:flex;align-items:center;gap:.5rem;padding:.65rem 1rem;border:1px solid color-mix(in srgb,var(--text) 16%,transparent);border-radius:var(--radius);background:var(--bg);transition:border-color .2s ease}
-.c997553:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 12%,transparent)}
-.c997553 input{width:100%;min-width:0;padding:.25rem 0;border:0;background:var(--bg);color:var(--text);font:550 2rem/1.3 var(--display);font-variant-numeric:tabular-nums}
-.c997553 input:focus-visible{outline-offset:2px}
-.c41b1b1{color:var(--muted);font-size:.8rem}
-.c8836aa{margin:.5rem 0 1.3rem;color:var(--muted);font-size:.74rem}
-.c09af66{display:grid;grid-template-columns:minmax(0,1fr) 32px minmax(0,1fr);align-items:center;gap:.6rem;padding:1.1rem 0;border-top:1px solid color-mix(in srgb,var(--text) 8%,transparent);border-bottom:1px solid color-mix(in srgb,var(--text) 8%,transparent)}
-.cb93fc9{display:flex;flex-direction:column;align-items:center;gap:.45rem;min-width:0;color:var(--muted);font-size:.75rem}
-.cc14530{display:flex;align-items:center;justify-content:center;min-height:52px;max-width:100%;overflow-wrap:anywhere;color:var(--text);font-weight:600}
-.cc14530 img,.cc14530 svg{display:block;max-width:100%;width:auto;height:44px;object-fit:contain}
-.c8abe2c{display:grid;place-items:center;width:32px;height:32px;border:1px solid color-mix(in srgb,var(--accent) 20%,transparent);border-radius:50%;background:color-mix(in srgb,var(--accent) 7%,var(--surface));color:var(--accent)}
-.c5a86cc{padding:1.4rem 0 .25rem}
-.ce66bcc{margin:0;color:var(--muted);font-size:.8rem}
-.c555ab4{display:flex;align-items:baseline;flex-wrap:wrap;gap:.5rem;margin:.3rem 0 1rem}
-.c555ab4 output{font:550 clamp(1.65rem,3vw,2.5rem)/1.2 var(--display);letter-spacing:-.045em;color:var(--text);overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
-.cbb99e7{display:grid;gap:.45rem;margin:0 0 1.2rem;font-size:.8rem}
-.cbb99e7>div{display:flex;justify-content:space-between;gap:1rem}
-.cbb99e7 dt{color:var(--muted)}
-.cbb99e7 dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
-.c2267fa .cd11686{width:100%;justify-content:space-between;min-height:50px;font-size:.9rem}
-.cf3e5ec{margin:1rem 0 0;color:var(--muted);font-size:.73rem;line-height:1.65}
-.ce9839d{margin:.6rem 0 0;color:var(--text);font-size:.8rem;font-weight:600}
-.ce9839d:empty{display:none}
-.c428fe8{padding:2.1rem 2.3rem;margin-bottom:4.5rem;border:1px solid color-mix(in srgb,var(--text) 9%,transparent);border-radius:var(--radius);background:linear-gradient(115deg,var(--surface),color-mix(in srgb,var(--accent) 4%,var(--surface)))}
-.cb0b686{margin:0 0 1.3rem;font:550 1.5rem/1.3 var(--display);letter-spacing:-.035em}
-.ce35a0a{width:100%;border-collapse:collapse;text-align:left;font-size:.92rem}
-.ce35a0a caption{text-align:left;padding:0 0 1rem;color:var(--muted)}
-.ce35a0a th,.ce35a0a td{padding:1rem .9rem;border-bottom:1px solid color-mix(in srgb,var(--text) 9%,transparent);vertical-align:top;overflow-wrap:anywhere}
-.ce35a0a th{font-weight:600;color:var(--text)}
-.ce35a0a td{color:var(--muted)}
-.ce35a0a th:first-child,.ce35a0a td:first-child{padding-left:0}
-.ce35a0a tr:last-child>*{border-bottom:0}
-.ce35a0a thead th{font-size:.82rem;color:var(--muted)}
-.cda10f8{max-width:820px;margin-inline:auto}
-.c905440{padding:0 0 2.6rem;margin:0 0 2.6rem;border-bottom:1px solid color-mix(in srgb,var(--text) 10%,transparent);scroll-margin-top:2rem}
-.c5a2767{margin:0 0 1.1rem;font:550 clamp(1.7rem,3vw,2.25rem)/1.2 var(--display);letter-spacing:-.04em;text-wrap:balance;overflow-wrap:anywhere}
-.ce9d2e5{color:var(--muted);font:400 1rem/1.85 var(--body);overflow-wrap:anywhere}
-.ce9d2e5 p{margin:0 0 1.15rem}
-.ce9d2e5 h3,.ce9d2e5 h4{margin:1.6rem 0 .65rem;color:var(--text);font:600 1.25rem/1.4 var(--display)}
-.ce9d2e5 strong{color:var(--text);font-weight:600}
-.ce9d2e5 ul,.ce9d2e5 ol{padding-left:1.4rem}
-.ce9d2e5 li{padding-left:.3rem;margin:.5rem 0}
-.ce9d2e5 li::marker{color:var(--accent)}
-.ce9d2e5 blockquote{margin:1.5rem 0;padding:1rem 1.4rem;border-left:3px solid var(--accent);border-radius:0 var(--radius) var(--radius) 0;background:color-mix(in srgb,var(--accent) 6%,var(--surface));color:var(--text)}
-.ce9d2e5 img{max-width:100%;height:auto;border-radius:var(--radius)}
-.ce9d2e5>:last-child{margin-bottom:0}
-.cec9d7a{margin:.8rem 0;border:1px solid color-mix(in srgb,var(--text) 10%,transparent);border-radius:var(--radius);background:var(--surface);overflow:hidden}
-.c1b536c{position:relative;display:block;padding:1.25rem 3.5rem 1.25rem 1.4rem;cursor:pointer;list-style:none;color:var(--text);font:550 1.05rem/1.5 var(--display)}
-.c1b536c::-webkit-details-marker{display:none}
-.c1b536c::after{content:"+";position:absolute;right:1.4rem;top:1.25rem;color:var(--accent);font:400 1.4rem/1.1 var(--body)}
-.cec9d7a[open]>.c1b536c::after,.cec9d7a details[open]>.c1b536c::after{content:"−"}
-.cec9d7a[open]{border-color:color-mix(in srgb,var(--accent) 35%,transparent)}
-.c1b536c:focus-visible{outline-offset:-5px;border-radius:var(--radius)}
-.cf30bc0{padding:0 1.4rem 1.4rem;color:var(--muted);font-size:.95rem;line-height:1.8;overflow-wrap:anywhere}
-.cf30bc0>:first-child{margin-top:0}
-.cf30bc0>:last-child{margin-bottom:0}
-.c14cba9{max-width:820px;margin:3.5rem auto 0;padding-top:2rem;border-top:1px solid color-mix(in srgb,var(--text) 10%,transparent)}
-.c0e14b5{display:grid;gap:.7rem;margin:0;padding:0;list-style:none}
-.ce729ca{padding:.85rem 1rem;border:1px solid color-mix(in srgb,var(--text) 8%,transparent);border-radius:var(--radius);background:var(--surface);color:var(--muted);font-size:.86rem;overflow-wrap:anywhere}
-.ce729ca a{color:var(--text);text-decoration-color:color-mix(in srgb,var(--accent) 55%,transparent)}
-a.ce729ca{display:block;color:var(--text)}
-.c14136f{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:4rem;padding:1.75rem 0 2rem;border-top:1px solid color-mix(in srgb,var(--text) 10%,transparent);color:var(--muted);font-size:.8rem}
-.c14136f p{margin:0}
-.c14136f a{color:var(--muted)}
-@media(min-width:1500px){.c92eef3{padding-top:2.75rem;padding-bottom:4rem}}
-@media(max-width:850px){.c92eef3{grid-template-columns:1fr;gap:2.5rem;padding-top:2.5rem;padding-bottom:3rem}.cf8756e{max-width:640px}.c151649{width:100%;max-width:560px;justify-self:center}h1{font-size:clamp(2.5rem,7vw,4rem)}.cf9bbd7{max-width:58ch}.c428fe8{margin-bottom:3rem}.c03d3cb{gap:1rem}}
-@media(max-width:540px){.c234f6c{width:calc(100% - 32px)}.cbdefd3{min-height:78px;gap:.75rem}.c8325dd{font-size:.95rem;gap:.5rem}.c426100{width:30px;height:30px}.c03d3cb>a:not(.cdb9fd1){display:none}.cdb9fd1{padding:.5rem .75rem;font-size:.8rem}.c16da08{padding-top:1.25rem}.c92eef3{padding-top:2rem;gap:2rem}h1{font-size:2.65rem}.cf9bbd7{font-size:1rem}.cf8756e>.cd11686{width:100%}.c61c1d0{text-align:center}.c151649{padding:8px;border-radius:calc(var(--radius) + 8px)}.c2267fa{padding:1.2rem}.c428fe8{padding:1.4rem 1.1rem}.ce35a0a{display:block;overflow-x:auto}.ce35a0a th,.ce35a0a td{min-width:125px;padding:.8rem .65rem}.c1b536c{padding-left:1rem}.cf30bc0{padding-left:1rem;padding-right:1rem}.c14136f{align-items:flex-start;flex-direction:column;margin-top:3rem}.c905440{margin-bottom:2rem;padding-bottom:2rem}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}.cd11686:hover{transform:none}}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;color:var(--ink);font:15px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden;background:var(--bg)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:none;-webkit-mask-image:linear-gradient(#000 0,rgba(0,0,0,.35) 60%,transparent 100%);mask-image:linear-gradient(#000 0,rgba(0,0,0,.35) 60%,transparent 100%)}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer;background:none;border:0;color:inherit}
+img{display:block;max-width:100%}
+h1,h2,h3{margin:0;font-family:var(--head);font-weight:500;letter-spacing:-.01em}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:8px}
+
+.nav{display:flex;align-items:center;gap:24px;padding:16px 24px;max-width:1280px;margin:0 auto;width:100%}
+.brand{display:inline-flex;align-items:center;gap:8px;font-family:var(--head);font-weight:500;font-size:20px;letter-spacing:-.02em;color:var(--ink);white-space:nowrap;flex:0 0 auto}
+.brand img{width:28px;height:28px}
+.nlinks{display:flex;align-items:center;gap:20px}
+.nlinks a{font-size:14px;font-weight:500;color:var(--muted);white-space:nowrap;transition:color .16s var(--ease)}
+.nlinks a:hover{color:var(--ink)}
+.spacer{flex:1}
+main{flex:1}
+.chain{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 12px;border-radius:10px;background:var(--panel-2);font-weight:500;font-size:14px;color:var(--ink);transition:background-color .16s var(--ease);flex:0 0 auto;white-space:nowrap}
+.chain img{width:20px;height:20px;border-radius:50%}
+.chain:hover{background:var(--line-2)}
+.chain .cv{width:12px;height:12px;color:var(--muted)}
+.connect{display:inline-flex;align-items:center;height:40px;padding:0 16px;border-radius:10px;background:var(--card);border:1px solid var(--line-2);color:var(--ink);font-weight:500;font-size:14px;transition:background-color .16s var(--ease),border-color .16s var(--ease);flex:0 0 auto;white-space:nowrap}
+.connect:hover{border-color:var(--faint);background:var(--panel)}
+
+.hero{display:flex;flex-direction:column;align-items:center;padding:32px 20px 48px}
+h1{font-size:clamp(36px,4.6vw,48px);line-height:1.08;letter-spacing:-.025em;text-align:center;color:var(--ink);margin:0 0 32px}
+
+.card{width:min(600px,100%);background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
+.tabs{display:flex;align-items:center;gap:4px;padding:20px 20px 16px}
+.tab{display:inline-flex;align-items:center;height:36px;padding:0 14px;border-radius:10px;font-weight:500;font-size:14px;color:var(--muted);transition:background-color .16s var(--ease),color .16s var(--ease)}
+.tab:hover{background:var(--panel-2);color:var(--ink)}
+.tab.on{background:var(--accent-soft);color:var(--accent-ink)}
+.tabs .sp{flex:1}
+.tabs .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:var(--muted);transition:background-color .16s var(--ease),color .16s var(--ease)}
+.tabs .ic:hover{background:var(--panel-2);color:var(--ink)}
+.tabs .ic svg{width:18px;height:18px}
+
+.promo{margin:0 20px;padding:32px;border-radius:12px;background:var(--promo);display:flex;align-items:center;gap:20px}
+.promo-txt{flex:1;min-width:0}
+.promo-h{font-family:var(--head);font-weight:500;font-size:clamp(22px,3.4vw,28px);line-height:1.2;letter-spacing:-.015em;color:var(--ink);margin:0 0 8px;text-wrap:balance}
+.promo-sub{font-size:15px;line-height:1.6;color:var(--text-2);margin:0;max-width:34ch}
+.promo-grid{flex:0 0 auto;display:grid;grid-template-columns:repeat(2,auto);gap:16px}
+.pico{width:52px;height:52px;border-radius:50%;background:var(--pico-bg);box-shadow:0 0 0 1px var(--pico-ring);display:grid;place-items:center;overflow:hidden}
+.pico img{width:100%;height:100%;object-fit:contain;display:block}
+.promo-flow{flex-direction:column;align-items:stretch;gap:24px}
+.promo-flow .promo-sub{max-width:44ch}
+.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.flow li{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px}
+.flow li+li::before{content:"";position:absolute;top:22px;right:calc(50% + 30px);width:calc(100% - 52px);height:1px;background:var(--line-2)}
+.fi{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;overflow:hidden;background:var(--pico-bg);box-shadow:0 0 0 1px var(--pico-ring);color:var(--accent-ink)}
+.fi img{width:100%;height:100%;display:block}
+.fi svg{width:20px;height:20px}
+.fi.on{background:var(--accent);color:var(--accent-on);box-shadow:none}
+.flow b{margin-top:4px;font-weight:500;font-size:14px;color:var(--ink)}
+.flow small{font-size:13px;line-height:1.4;color:var(--muted)}
+.cta-wrap{padding:20px}
+.cta{width:100%;height:60px;border-radius:12px;background:var(--accent);color:var(--accent-on);font-weight:500;font-size:16px;transition:background-color .16s var(--ease),transform .12s var(--ease)}
+.cta:hover{background:var(--accent-hover)}
+.cta:active{transform:scale(.99)}
+@media(max-width:470px){.promo{flex-direction:column;align-items:flex-start}.promo-grid{grid-template-columns:repeat(4,auto)}.promo-sub{max-width:none}}
+
+.learn{max-width:720px;margin:48px auto 0;width:100%;padding:0 24px 72px}
+.learn-h{font-size:14px;font-weight:500;color:var(--muted);text-align:center;margin:0 0 12px}
+.lrow{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:flex-start}
+.lcard{flex:0 0 auto;background:transparent;border:1px solid var(--line-2);border-radius:10px;transition:background-color .16s var(--ease),border-color .16s var(--ease)}
+.lcard>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;height:36px;padding:0 12px;font-weight:500;font-size:14px;color:var(--text-2)}
+.lcard>summary::-webkit-details-marker{display:none}
+.lcard:hover{border-color:var(--faint);background:var(--card)}.lcard:hover>summary{color:var(--ink)}
+.lcard .chev{width:6px;height:6px;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:rotate(45deg);margin-top:-4px;flex-shrink:0;transition:transform .16s var(--ease)}
+.lcard[open]{order:9;flex:0 0 100%;min-width:0;background:var(--card);border-color:var(--line-2);border-radius:16px;margin-top:8px}
+.lcard[open]>summary{height:auto;padding:20px 24px 0;color:var(--muted);font-size:13px}
+.lcard[open] .chev{transform:rotate(225deg);margin-top:4px}
+.lbody{padding:4px 24px 24px;max-width:660px}
+.lbody h2{font-size:22px;line-height:1.3;color:var(--ink);margin:8px 0 4px}
+.lbody h3{font-size:15px;line-height:1.4;color:var(--ink);margin:20px 0 4px}
+.lbody p{margin:0;font-size:15px;line-height:1.7;color:var(--text-2)}
+.lbody p+p{margin-top:8px}
+.lbody ul,.lbody ol{margin:8px 0 0;padding-left:20px}
+.lbody li{font-size:15px;line-height:1.7;color:var(--text-2);margin-bottom:4px}
+.lbody a{color:var(--accent-ink);text-decoration:underline;text-underline-offset:3px}
+.lbody strong,.lbody b{color:var(--ink);font-weight:500}
+.lbody .tbl{overflow-x:auto;margin:16px 0 4px}
+.lbody table{width:100%;min-width:420px;border-collapse:collapse;font-size:14px}
+.lbody caption{text-align:left;color:var(--muted);font-size:13px;margin-bottom:8px}
+.lbody th,.lbody td{text-align:left;padding:8px 12px;border:1px solid var(--line-2);vertical-align:top;line-height:1.45}
+.lbody thead th{background:var(--panel);color:var(--ink);font-weight:500}
+.lbody tbody th{background:var(--panel);color:var(--muted);white-space:nowrap;font-weight:500}
+.lbody td{color:var(--text-2)}
+.lfaq h3{margin-top:16px;font-size:16px}
+
+footer{border-top:1px solid var(--line-2);background:var(--card)}
+.foot{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding:20px 24px 24px;color:var(--muted);font-size:13px}
+.foot a{color:var(--muted);transition:color .16s var(--ease)}.foot a:hover{color:var(--ink)}.foot .sep{color:var(--faint)}
+
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,8px);background:var(--ink);color:var(--bg);border-radius:12px;padding:12px 16px;font-size:13px;box-shadow:0 16px 40px -16px rgba(13,17,28,.5);z-index:60;opacity:0;visibility:hidden;transition:opacity .2s var(--ease),transform .2s var(--ease),visibility .2s;max-width:calc(100% - 32px)}
+.toast.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+
+@media(max-width:1120px){.nlinks{display:none}}
+@media(max-width:720px){.chain span{display:none}.chain{padding:0 8px;gap:4px}}
+@media(max-width:560px){
+  .nav{padding:12px 16px;gap:8px}
+  .brand{font-size:16px}
+  .brand img{width:24px;height:24px}
+  .chain{height:36px;padding:0 8px;gap:4px}
+  .chain span{display:none}
+  .connect{height:36px;padding:0 12px;font-size:13px}
+  .hero{padding:24px 16px 40px}
+  .tabs{padding:16px 16px 12px}.promo{margin:0 16px;padding:24px}.cta-wrap{padding:16px}.cta{height:56px}
+  .learn{margin-top:40px;padding:0 16px 56px}
+}
 </style>
+<link rel="prerender" href="/dashboard/">
+<link rel="prefetch" href="/dashboard/" as="document">
+<link rel="preload" href="/dashboard/" as="document">
 </head>
-<body id="top">
-<a class="c5731ac" href="#content">Skip to content</a>
-<header class="c234f6c">
-<nav class="cbdefd3" aria-label="Main navigation">
-<a class="c8325dd" href="#top"><span class="c426100" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h15m-4-4 4 4-4 4M20 16H5m4-4-4 4 4 4"/></svg></span>Swap guide</a>
-<div class="c03d3cb"><a href="#key-facts">Key facts</a><a href="#sources">Sources</a><a class="cdb9fd1" href="dashboard/">Swap <span aria-hidden="true">↗</span></a></div>
-</nav>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-cv" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 6 5 5 5-5"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5c0 4.4 3 8.4 7 10 4-1.6 7-5.6 7-10V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-coins" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="9" cy="7" rx="5" ry="2.5"/><path d="M4 7v4c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5V7"/><path d="M10 15.5c.6 1.2 2.6 2 5 2 2.8 0 5-1.1 5-2.5v-4c0-1.4-2.2-2.5-5-2.5"/><path d="M20 15v4c0 1.4-2.2 2.5-5 2.5s-5-1.1-5-2.5v-2"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/><path d="M12 14.5v2"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></symbol>
+<symbol id="i-drop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5s-6 6.4-6 10.5a6 6 0 0 0 12 0c0-4.1-6-10.5-6-10.5z"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+<symbol id="i-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="7" rx="2"/><rect x="4" y="13" width="16" height="7" rx="2"/><path d="M8 7.5h.01M8 16.5h.01"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 13a7.8 7.8 0 0 0 0-2l2-1.5-2-3.4-2.3 1a7.6 7.6 0 0 0-1.7-1L15 2.5h-4l-.4 2.6c-.6.3-1.2.6-1.7 1l-2.3-1-2 3.4L4.6 11a7.8 7.8 0 0 0 0 2l-2 1.5 2 3.4 2.3-1c.5.4 1.1.7 1.7 1l.4 2.6h4l.4-2.6c.6-.3 1.2-.6 1.7-1l2.3 1 2-3.4z"/></symbol>
+</defs></svg>
+
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="Optimism DEX home"><img src="icon.svg" alt=""><span>Optimism DEX</span></a>
+  <nav class="nlinks" aria-label="Primary">
+    <a href="#overview">What it is</a>
+    <a href="#compare">Rollup vs mainnet</a>
+    <a href="#how">How to swap</a>
+    <a href="#fees">Fees &amp; gas</a>
+    <a href="#security">Security</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <span class="spacer"></span>
+  <a class="chain" href="/dashboard/" style="text-decoration:none"><img src="assets/coin-optimism.svg" alt=""><span>Optimism</span><svg class="cv" aria-hidden="true"><use href="#i-cv"/></svg></a>
+  <a class="connect" href="/dashboard/" style="text-decoration:none">Connect wallet</a>
 </header>
-<div class="c234f6c">
-<div class="c16da08"><nav class="cf03d94" aria-label="Breadcrumb"><a href="dashboard/">Home</a> <span>/</span> <span>Swaps</span> <span>/</span> <span>Optimism DEX</span></nav></div>
-<section class="c92eef3" aria-labelledby="hero-title">
-<div class="cf8756e">
-<p class="cbeef2c">Plan your swap</p>
-<h1 id="hero-title">Optimism <em>DEX</em>.</h1>
-<p class="cf9bbd7">An Optimism DEX lets you trade tokens directly from your own wallet on Optimism, an Ethereum layer-2 network built on the OP Stack. Instead of routing an order through a company's books, an Optimism DEX swaps against on-chain liquidity pools, settles in seconds, and charges gas in ETH rather than a separate token. You review the rate, the price impact and your slippage tolerance before you sign, and your funds never leave your own wallet.</p>
-<a class="cd11686" href="dashboard/">Swap <span class="cd8d005" aria-hidden="true">↗</span></a>
-<p class="c61c1d0">Compare the route. Estimate the rate.</p>
-</div>
-<aside class="c151649" aria-labelledby="estimator-title">
-<div class="c2267fa">
-<div class="c955eea"><h2 id="estimator-title">Swap estimator</h2><span class="cb179f8">Live estimate</span></div>
-<label class="caad16b" for="amount">You pay</label>
-<div class="c997553"><input id="amount" type="number" inputmode="decimal" min="1" max="1000000000" step="0.01" value="1000" aria-describedby="amount-help amount-error"><span class="c41b1b1">units</span></div>
-<p class="c8836aa" id="amount-help">Enter 1–1,000,000,000 units, up to two decimal places.</p>
-<p class="ce9839d" id="amount-error" aria-live="polite"></p>
-<div class="c09af66" aria-label="Swap route">
-<div class="cb93fc9"><span>From</span><div class="cc14530"><img src="assets/tokens/optimism.svg" alt="Optimism" width="28" height="28"></div></div>
-<span class="c8abe2c" aria-hidden="true">→</span>
-<div class="cb93fc9"><span>To</span><div class="cc14530"><img src="assets/tokens/usdc.svg" alt="USD Coin" width="28" height="28"></div></div>
-</div>
-<div class="c5a86cc" aria-live="polite" aria-atomic="true">
-<p class="ce66bcc">Estimated amount received</p>
-<div class="c555ab4"><output id="received" for="amount">998.25</output><span class="c41b1b1">units</span></div>
-<dl class="cbb99e7">
-<div><dt>Estimated fee</dt><dd><output id="fee" for="amount">1.75</output> units</dd></div>
-<div><dt>Estimated time</dt><dd><output id="time" for="amount">5–7 min</output></dd></div>
-</dl>
-</div>
-<a class="cd11686" href="dashboard/">Swap <span class="cd8d005" aria-hidden="true">→</span></a>
-<p class="cf3e5ec">Fee = 0.15% of the amount + 0.25 units. Time starts at 2–4 minutes, adding one minute for every tenfold increase from 1 unit, rounded up.</p>
-<noscript><p class="c8836aa">Enable JavaScript to update the estimate as you change the amount.</p></noscript>
-</div>
-</aside>
-</section>
-<section class="c428fe8" id="key-facts" aria-labelledby="facts-title">
-<h2 class="cb0b686" id="facts-title">Key facts</h2>
-<table class="ce35a0a"><tbody><tr><th scope="row">Network</th><td>Optimism — Ethereum layer-2 (OP Stack)</td></tr>
-<tr><th scope="row">Gas token</th><td>ETH (bridged from Ethereum)</td></tr>
-<tr><th scope="row">Trade type</th><td>AMM swaps against on-chain liquidity pools</td></tr>
-<tr><th scope="row">Popular protocols</th><td>Velodrome, Uniswap on Optimism</td></tr>
-<tr><th scope="row">Typical swap fee</th><td>~0.01%–0.3% of trade value</td></tr>
-<tr><th scope="row">Custody</th><td>Self-custody — you hold your keys</td></tr></tbody></table>
-</section>
-<main class="cda10f8" id="content">
-<section class="c905440"><h2 class="c5a2767">What Is an Optimism DEX?</h2><div class="ce9d2e5"><strong>An Optimism DEX is a decentralized exchange that runs on the Optimism layer-2 network, letting you swap tokens directly from your own wallet at a fraction of Ethereum mainnet gas costs.</strong> Unlike a centralized exchange, it never takes custody of your funds — trades execute through smart contracts, and liquidity comes from pools that anyone can supply. Because Optimism batches and compresses transaction data before posting it to Ethereum, swaps can settle for gas measured in cents rather than dollars, even during periods of high network demand.<h3>Automated Market Makers vs. Order Books</h3>Most activity on this kind of exchange runs through an automated market maker (AMM), where a swap is priced against a liquidity pool rather than matched against another trader's order. Protocols such as <strong>Velodrome</strong> concentrate liquidity for correlated assets, which keeps slippage low on common pairs like ETH and stablecoins.<h3>Why Optimism Exists</h3>Optimism is an <strong>optimistic rollup</strong>: it executes transactions off the main Ethereum chain and only posts compressed data back, assuming transactions are valid unless challenged within a dispute window. That design, documented in the <a href="https://docs.optimism.io/" rel="nofollow noopener" target="_blank">Optimism docs</a>, is what keeps swap fees low without sacrificing Ethereum-grade security.</div></section>
-<section class="c905440"><h2 class="c5a2767">The OP Stack Behind Every Optimism DEX Swap</h2><div class="ce9d2e5">Every Optimism DEX runs on top of the OP Stack, the modular codebase that also powers several other rollups tracked on <a href="https://l2beat.com/scaling/projects/optimism" rel="nofollow noopener" target="_blank">L2BEAT</a>. A swap you submit is signed in your wallet, sequenced by Optimism's network, executed against a liquidity pool, and ultimately settled back to Ethereum, which anchors the chain's security even though your trade never touches mainnet gas prices.<h3>Gas Is Paid in ETH</h3>Unlike some other layer-2 networks, Optimism charges gas in <strong>ETH</strong>, not a separate native token, so the same asset you already hold for Ethereum covers every transaction fee here. Bridge a small amount of ETH onto the network, and that balance pays for every approval and swap you make.<h3>Checking a Transaction</h3>Every swap produces a transaction hash you can verify independently on <a href="https://optimistic.etherscan.io/" rel="nofollow noopener" target="_blank">Optimistic Etherscan</a>, which shows the exact amount sent, the amount received, and the contracts involved — useful for confirming a trade settled the way the interface said it would.</div></section>
-<section class="c905440"><h2 class="c5a2767">Optimism DEX Fees and Swap Times</h2><div class="ce9d2e5">Fees on an Optimism DEX come in two layers: the small network gas fee paid in ETH, and the pool's own swap fee, typically a fraction of a percent taken from the trade, with the underlying mechanics covered in the <a href="https://docs.optimism.io/" rel="nofollow noopener" target="_blank">Optimism docs</a>. Both are shown before you confirm, along with the minimum amount you'll receive after slippage tolerance.<table><thead><tr><th>Step</th><th>What you pay</th><th>Typical time</th></tr></thead><tbody><tr><td>Token approval</td><td>Small ETH gas fee</td><td>Seconds</td></tr><tr><td>Swap execution</td><td>ETH gas + pool fee (~0.01–0.3%)</td><td>Seconds</td></tr><tr><td>Bridging ETH in first</td><td>Ethereum L1 gas, if arriving from mainnet</td><td>Minutes</td></tr></tbody></table></div></section>
-<section class="c905440"><h2 class="c5a2767">How to Swap on an Optimism DEX, Step by Step</h2><div class="ce9d2e5">The flow is the same across most interfaces, so once you've done it once here you can repeat it on any pair.<ul><li>Connect a self-custody wallet set to the Optimism network.</li><li>Select the token you're swapping from and the token you want to receive.</li><li>Review the quoted rate, the price impact, and your slippage tolerance.</li><li>Approve the token if this is the first time you're trading it.</li><li>Confirm the swap transaction and pay the ETH gas fee.</li><li>Check the resulting balance in your wallet or on a block explorer.</li></ul></div></section>
-<section class="c905440"><h2 class="c5a2767">Is an Optimism DEX Safe to Use?</h2><div class="ce9d2e5">An Optimism DEX never holds your funds — you keep your keys the entire time, and every swap is a transaction you sign and can inspect beforehand. The risks that remain are the ones any DeFi trader manages: contract risk, pool liquidity, and the usual phishing attempts that target wallet approvals.<h3>Slippage and Price Impact</h3>Thin liquidity pools can move the price against you mid-trade, so the interface lets you set a slippage tolerance and shows the estimated price impact before you sign. Keeping that tolerance tight protects you from a worse fill than expected, though it can cause a trade to fail if the pool moves too fast.<h3>Approvals and Revocations</h3>Granting a token approval here lets a contract move that token on your behalf, so limit approvals to the amount you intend to trade and revoke old ones you no longer use. No legitimate exchange or wallet will ever ask for your seed phrase to complete a swap.</div></section>
-<section class="c905440"><h2 class="c5a2767">Optimism DEX vs. Centralized Exchanges</h2><div class="ce9d2e5">A centralized exchange matches your order against its own books and holds your funds until you withdraw. An Optimism DEX skips that custody step entirely: liquidity lives in on-chain pools, pricing is transparent, and the underlying rollup design is covered in general <a href="https://ethereum.org/en/layer-2/" rel="nofollow noopener" target="_blank">Ethereum layer-2 resources</a> rather than any single company's internal ledger. The tradeoff is that you manage your own gas, your own approvals, and your own slippage settings — control that comes with more responsibility but removes a counterparty from the equation.</div></section>
-<section class="c905440"><h2 class="c5a2767">Choosing the Right Optimism DEX for a Trade</h2><div class="ce9d2e5">Not every Optimism DEX is built the same way. Some, like <strong>Velodrome</strong>, specialize in stable and correlated pairs with concentrated liquidity and low slippage, a design explained in the <a href="https://docs.velodrome.finance/" rel="nofollow noopener" target="_blank">Velodrome documentation</a>; others mirror Ethereum mainnet protocols such as Uniswap, adapted to run on Optimism's architecture. Before committing to a pool, compare the quoted rate, the fee tier, and the available liquidity across a couple of interfaces. Over time, the best fit is simply the one that consistently gives you the best net amount after fees and slippage on the pairs you trade most.</div></section><section class="c905440 c360212" id="related"><h2 class="c5a2767">Related tools</h2><div class="ce9d2e5"><ul><li><a href="https://paraswap-app.github.io/">ParaSwap explained</a></li><li><a href="https://swap-bnb.github.io/">Swap BNB</a></li><li><a href="https://polygon-swap.github.io/">Polygon Swap guide</a></li><li><a href="https://crosschain-swap.github.io/">Cross-Chain Swap guide</a></li><li><a href="https://swap-monero.github.io/">Monero Swap</a></li></ul></div></section>
-<details class="cec9d7a"><summary class="c1b536c">What is an Optimism DEX?</summary><div class="cf30bc0">An Optimism DEX is a decentralized exchange built on the Optimism network, letting you swap tokens against on-chain liquidity pools from a self-custody wallet while paying gas in ETH instead of a separate token.</div></details>
-<details class="cec9d7a"><summary class="c1b536c">Do I need ETH to trade on Optimism?</summary><div class="cf30bc0">Yes. Optimism charges network gas in ETH, so you need a small ETH balance on the network to cover approvals and swaps, separate from any ETH you're trading.</div></details>
-<details class="cec9d7a"><summary class="c1b536c">Which protocol is best for stablecoin swaps on Optimism?</summary><div class="cf30bc0">Protocols built around concentrated, correlated-asset pools, such as Velodrome, generally offer lower slippage for stablecoin and ETH pairs than general-purpose pools.</div></details>
-<details class="cec9d7a"><summary class="c1b536c">Is swapping on an Optimism DEX cheaper than Ethereum mainnet?</summary><div class="cf30bc0">Yes, substantially. Optimism batches and compresses transaction data before settling to Ethereum, which is why swap gas on the network typically costs a small fraction of a mainnet swap.</div></details>
-<details class="cec9d7a"><summary class="c1b536c">What happens if a swap fails?</summary><div class="cf30bc0">A failed transaction reverts on-chain; you keep your tokens and only lose the small gas fee spent attempting it. Nothing moves until the transaction confirms successfully.</div></details>
-<details class="cec9d7a"><summary class="c1b536c">Can slippage cause my swap to fail?</summary><div class="cf30bc0">Yes. If the pool price moves beyond your slippage tolerance before the transaction confirms, the swap reverts rather than filling at a worse rate than you allowed.</div></details>
-<details class="cec9d7a"><summary class="c1b536c">Do I keep custody of my funds on an Optimism DEX?</summary><div class="cf30bc0">Yes. You connect your own wallet, sign each transaction yourself, and the exchange never takes custody of your tokens at any point.</div></details>
+
+<main>
+  <section class="hero">
+    <h1>Optimism DEX</h1>
+
+    <section class="card" aria-label="Optimism DEX">
+      <div class="tabs">
+        <button class="tab on" type="button">Swap</button>
+        <button class="tab" type="button">Status</button>
+        <span class="sp"></span>
+        <button class="ic gear" type="button" aria-label="Settings" data-toast="Settings are disabled in this demo."><svg aria-hidden="true"><use href="#i-gear"/></svg></button>
+      </div>
+
+      <div class="promo">
+        <div class="promo-txt">
+          <h2 class="promo-h">Swap OP, ETH, USDC and USDT</h2>
+          <p class="promo-sub">Trade on Optimism, an optimistic rollup on Ethereum. Gas is paid in ETH and you sign every step.</p>
+        </div>
+        <div class="promo-grid" aria-hidden="true">
+          <span class="pico"><img src="assets/coin-optimism.svg" alt=""></span>
+          <span class="pico"><img src="assets/tether-usdt.svg" alt=""></span>
+          <span class="pico"><img src="assets/usd-coin-usdc.svg" alt=""></span>
+          <span class="pico"><img src="assets/ethereum-eth.svg" alt=""></span>
+        </div>
+      </div>
+
+      <div class="cta-wrap"><a class="cta" href="/dashboard/" style="display:flex;align-items:center;justify-content:center;text-decoration:none">Swap on Optimism</a></div>
+    </section>
+  </section>
+
+  <section class="learn" id="learn">
+    <p class="learn-h">Learn about Optimism DEX</p>
+    <div class="lrow">
+      <details class="lcard" name="learn" id="overview"><summary><span>What it is</span><span class="chev" aria-hidden="true"></span></summary><div class="lbody"><h2>What Optimism DEX is</h2>
+<h3>Swaps on an Ethereum rollup</h3>
+<p><strong>Optimism DEX</strong> is an interface for swapping tokens such as OP, ETH, USDC and USDT on Optimism. Optimism is an optimistic rollup: it runs transactions off Ethereum mainnet and posts the data back to Ethereum, which keeps fees lower while relying on Ethereum for security.</p>
+<h3>How the swap runs</h3>
+<p>Trades are routed through on-chain liquidity on Optimism and settle in your own wallet. The interface shows the quote and route first, and nothing happens until you sign. Learn more about <a href="https://ethereum.org/en/developers/docs/scaling/optimistic-rollups/" target="_blank" rel="nofollow noopener">optimistic rollups</a>.</p></div></details>
+
+      <details class="lcard" name="learn" id="compare"><summary><span>Rollup vs mainnet</span><span class="chev" aria-hidden="true"></span></summary><div class="lbody"><h2>Optimism vs Ethereum mainnet</h2>
+<p>A swap looks the same on both networks. The differences are where it runs, what it costs and how funds move in and out.</p>
+<div class="tbl"><table><caption>Swapping on Optimism vs Ethereum mainnet</caption><thead><tr><th scope="col"></th><th scope="col">Optimism</th><th scope="col">Ethereum mainnet</th></tr></thead><tbody><tr><th scope="row">Network type</th><td>optimistic rollup</td><td>layer-1</td></tr><tr><th scope="row">Gas token</th><td>ETH</td><td>ETH</td></tr><tr><th scope="row">Moving funds in</th><td>bridge from Ethereum</td><td>already there</td></tr><tr><th scope="row">Native withdrawal to L1</th><td>about 7-day challenge window</td><td>not applicable</td></tr></tbody></table></div>
+<h3>In practice</h3>
+<p>Swapping on Optimism is a normal on-chain trade. The waiting period only matters if you withdraw through the native bridge back to Ethereum.</p></div></details>
+
+      <details class="lcard" name="learn" id="how"><summary><span>How to swap</span><span class="chev" aria-hidden="true"></span></summary><div class="lbody"><h2>How to swap on Optimism</h2>
+<h3>Quote first, sign second</h3>
+<p>The interface shows the expected output, the route, the price impact and your slippage tolerance. Nothing is sent to the network until you confirm in your wallet.</p>
+<h3>Step by step</h3>
+<ol>
+<li>Connect your wallet and switch it to the Optimism network.</li>
+<li>Choose the token you sell and the token you want, such as ETH to USDC or OP to ETH, then enter an amount.</li>
+<li>Review the quote, route and estimated gas, and approve the sell token once if it is an ERC-20 token.</li>
+<li>Sign the swap; it settles on Optimism and the bought token appears in your wallet.</li>
+</ol>
+<p>Native ETH needs no approval, but OP, USDC and USDT do before the first swap from a wallet.</p></div></details>
+
+      <details class="lcard" name="learn" id="fees"><summary><span>Fees &amp; gas</span><span class="chev" aria-hidden="true"></span></summary><div class="lbody"><h2>What a swap on Optimism costs</h2>
+<h3>Gas in ETH</h3>
+<p>Every transaction on Optimism is paid in ETH, including approvals. Gas is generally lower than on Ethereum mainnet, but it is never zero and it varies with network conditions. See how <a href="https://ethereum.org/en/developers/docs/gas/" target="_blank" rel="nofollow noopener">gas works</a>.</p>
+<h3>Trading cost</h3>
+<p>Price impact, your slippage tolerance and any pool or routing fee are already reflected in the quoted output. Thinner pools usually mean more price impact on larger trades.</p>
+<h3>Bridging and withdrawals</h3>
+<p>Moving funds between Ethereum and Optimism has its own bridge fee and gas, shown by the bridge you use. Withdrawing through the native bridge also includes the challenge window.</p></div></details>
+
+      <details class="lcard" name="learn" id="security"><summary><span>Security</span><span class="chev" aria-hidden="true"></span></summary><div class="lbody"><h2>Staying safe on Optimism</h2>
+<h3>Non-custodial by design</h3>
+<p>You connect your own wallet and sign every transaction yourself. The interface quotes and routes; it never holds your funds or your keys.</p>
+<h3>Before you sign</h3>
+<ul>
+<li>Confirm that your wallet is on Optimism and not another network with similar assets.</li>
+<li>Verify token contract addresses; bridged and counterfeit versions of USDC, USDT and OP can look alike.</li>
+<li>Approve only the amount you need and revoke old allowances you no longer use.</li>
+<li>Rollups, bridges and smart contracts can contain bugs, so risk is never zero.</li>
+</ul></div></details>
+
+      <details class="lcard" name="learn" id="faq"><summary><span>FAQ</span><span class="chev" aria-hidden="true"></span></summary><div class="lbody lfaq"><h2>Optimism DEX FAQ</h2>
+<h3>What is Optimism DEX?</h3>
+<p>It is a non-custodial interface for swapping OP, ETH, USDC, USDT and other tokens on Optimism. You connect your wallet, review a quote and sign each transaction yourself.</p>
+<h3>What do I need to pay gas on Optimism?</h3>
+<p>You need ETH on the Optimism network. Gas is always paid in ETH, so keep a small balance even when you trade OP or stablecoins.</p>
+<h3>How long does a native withdrawal to Ethereum take?</h3>
+<p>Withdrawals through the native bridge of an optimistic rollup have a challenge window of about 7 days before funds are final on Ethereum. Swapping on Optimism itself is not affected by this window.</p>
+<h3>How do I get funds onto Optimism?</h3>
+<p>Use a bridge to move assets from Ethereum or another supported network onto Optimism. The bridge shows its own fee and timing, and the swap interface works with tokens already on Optimism.</p>
+<h3>Why is a token approval needed?</h3>
+<p>ERC-20 tokens such as OP, USDC and USDT need a one-time allowance before a router can move them for you. The approval is a separate transaction that costs a little gas. Native ETH needs none.</p>
+<h3>Do I need an account to swap?</h3>
+<p>No. A wallet is enough, with no sign-up or identity check on the interface. Your funds stay in your wallet unless you approve and sign a swap.</p></div></details>
+    </div>
+  </section>
 </main>
-<section class="c14cba9" id="sources" aria-labelledby="sources-title">
-<h2 class="cb0b686" id="sources-title">Sources</h2>
-<ul class="c0e14b5"><li><a class="ce729ca" href="https://docs.optimism.io/" rel="nofollow noopener" target="_blank">Optimism documentation</a></li>
-<li><a class="ce729ca" href="https://l2beat.com/scaling/projects/optimism" rel="nofollow noopener" target="_blank">Optimism on L2BEAT</a></li>
-<li><a class="ce729ca" href="https://optimistic.etherscan.io/" rel="nofollow noopener" target="_blank">Optimistic Etherscan</a></li>
-<li><a class="ce729ca" href="https://docs.velodrome.finance/" rel="nofollow noopener" target="_blank">Velodrome documentation</a></li></ul>
-</section>
-<footer class="c14136f"><p>Updated Nov 03, 2026</p><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
-</div>
+
+<footer>
+  <div class="foot"><span>&copy; 2026 Optimism DEX</span><span class="sep">&middot;</span><a href="legal.html#privacy">Privacy</a><span class="sep">&middot;</span><a href="legal.html#terms">Terms</a><span class="sep">&middot;</span><span>Non-custodial &middot; Optimism</span></div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
 <script>
-(() => {
-  const amount = document.getElementById('amount');
-  const received = document.getElementById('received');
-  const fee = document.getElementById('fee');
-  const time = document.getElementById('time');
-  const error = document.getElementById('amount-error');
-  const format = new Intl.NumberFormat('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  let timer;
-  function update() {
-    const value = amount.valueAsNumber;
-    if (!Number.isFinite(value) || !amount.validity.valid) {
-      amount.setAttribute('aria-invalid', 'true');
-      error.textContent = 'Enter an amount from 1 to 1,000,000,000 with up to two decimal places.';
-      received.value = '—';
-      fee.value = '—';
-      time.value = '—';
-      return;
-    }
-    amount.removeAttribute('aria-invalid');
-    error.textContent = '';
-    const amountCents = Math.round(value * 100);
-    const feeCents = Math.round(amountCents * 0.0015 + 25);
-    const minutes = 2 + Math.ceil(Math.log10(value));
-    received.value = format.format((amountCents - feeCents) / 100);
-    fee.value = format.format(feeCents / 100);
-    time.value = minutes + '–' + (minutes + 2) + ' min';
-  }
-  amount.addEventListener('input', () => {
-    clearTimeout(timer);
-    timer = setTimeout(update, 180);
-  });
-  amount.addEventListener('change', () => {
-    clearTimeout(timer);
-    update();
-  });
-  update();
+(function(){
+"use strict";
+var tabs=[].slice.call(document.querySelectorAll('.tab'));
+tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x){x.classList.toggle('on',x===t);});});});
+
+var toast=document.getElementById('toast'),tT;
+function notify(m){toast.textContent=m;toast.classList.add('show');clearTimeout(tT);tT=setTimeout(function(){toast.classList.remove('show');},3000);}
+[].slice.call(document.querySelectorAll('[data-toast]')).forEach(function(b){b.addEventListener('click',function(){notify(b.getAttribute('data-toast'));});});
+
+function openHash(){var id=location.hash.slice(1);if(!id)return;var c=document.getElementById(id);if(c&&c.matches&&c.matches('.lcard[name="learn"]'))c.open=true;}
+window.addEventListener('hashchange',openHash);openHash();
+[].slice.call(document.querySelectorAll('.nlinks a')).forEach(function(a){a.addEventListener('click',function(){var c=document.getElementById(a.getAttribute('href').slice(1));if(c&&c.matches('.lcard'))c.open=true;});});
 })();
 </script>
-</body>
-</html>
+</body></html>
